@@ -1,0 +1,97 @@
+%{
+// This parser specs must be preprocessed with `leg(1)`: sudo apt install peg
+// Preprocess with `leg -o _parse-piped.c parse-piped.leg`
+// After having preprocessed with `leg(1)`, preprocess with `allocppx.pl`
+
+// This is the `allocppx.pl` directive:
+/*!(alloc-pp _heap)!*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+
+typedef struct String string_t;
+typedef struct Tree tree_t;
+typedef enum TreeKind tree_kind_t;
+
+struct String {
+	char *buffer;
+	size_t size;
+	string_t *next;
+};
+
+struct Tree {
+	enum TreeKind {  TREE_NAME, TREE_SIG, TREE_DESC, TREE_EX, TREE_ERR, TREE_SEE_ALSO, } kind;
+	String *contents;
+	tree_t *next;
+};
+
+string_t *mk_string(char *buffer, size_t size);
+tree_t *mk_tree(tree_kind_t kind, string_t *contents);
+
+void add_string(string_t **head, char *buffer, size_t size);
+void add_tree(tree_t **head, tree_kind_t kind, string_t contents);
+
+#define YYSTYPE Tree*
+
+%}
+
+
+
+
+%%
+
+#define ERROR_OUT() do { fprintf("Error: Allocation error at %s\n", __func__); exit(EXIT_FAILURE); } while (0) 
+
+string_t *mk_string(char *buffer, size_t size) {
+    string_t *new_string = (string_t *)_heap_alloc_notrace(sizeof(string_t));
+    if (new_string) {
+        new_string->buffer = (char *)_heap_alloc_notrace(size);
+        if (new_string->buffer) {
+            memcpy(new_string->buffer, buffer, size);
+        }
+        new_string->size = size;
+        new_string->next = NULL;
+	return new_string;
+    }
+    ERROR_OUT();
+}
+
+tree_t *mk_tree(tree_kind_t kind, string_t *contents) {
+    tree_t *new_tree = (tree_t *)_heap_alloc_notrace(sizeof(tree_t));
+    if (new_tree) {
+        new_tree->kind = kind;
+        new_tree->contents = contents;
+        new_tree->next = NULL;
+	return new_tree;
+    }
+    ERROR_OUT();
+}
+
+void add_string(string_t **head, char *buffer, size_t size) {
+    string_t *new_string = mk_string(buffer, size);
+    if (!*head) {
+        *head = new_string;
+    } else {
+        string_t *current = *head;
+        while (current->next) {
+            current = current->next;
+        }
+        current->next = new_string;
+    }
+}
+
+void add_tree(tree_t **head, tree_kind_t kind, string_t *contents) {
+    tree_t *new_tree = mk_tree(kind, contents);
+    if (!*head) {
+        *head = new_tree;
+    } else {
+        tree_t *current = *head;
+        while (current->next) {
+            current = current->next;
+        }
+        current->next = new_tree;
+    }
+}
