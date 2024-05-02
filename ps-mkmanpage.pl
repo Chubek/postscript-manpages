@@ -130,6 +130,7 @@ sub parse_operator {
 		chomp;
 		last if m/^\|hr$/;
 		next if m/^[^-]/;
+		next if m/^-[,\\n ]{0,32}$/;
 		push @acc_text, $2 if m/^-(\\n\s+)?(.+)$/;
 		next;
 	}
@@ -145,7 +146,7 @@ sub parse_operator {
 	my $ref = \$signature;
 
 	for (@acc_text) {
-		next if m/.*\\n.*/;
+		next if m/^[,\\n\s]{1,8}$/;
 		if (/EXAMPLE:/) { $ref = \$example; next; }
 		if (/SEE ALSO:/) { $ref = \$see_also; next; }
 		if (/ERRORS:/) { $ref = \$errors; next; }
