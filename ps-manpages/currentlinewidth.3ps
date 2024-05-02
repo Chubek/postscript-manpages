@@ -6,7 +6,7 @@
 - currentlinewidth num
 
 .SH DESCRIPTION
- returns the current value of the line width parameter in the  graphics state. 
+returns the current value of the line width parameter in the  graphics state. 
 
 .SH EXAMPLE
 (NONE)

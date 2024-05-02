@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+operators to be disabled for as long as those outlines remain in\n      the current path.
 
 .SH DESCRIPTION
 
@@ -11,6 +11,14 @@
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  limitcheck(3ps)
+.B  nocurrentpoint(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  show(3ps)
+.B  flattenpath(3ps)
+.B  pathbbox(3ps)
+.B  clip(3ps)
+

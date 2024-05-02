@@ -6,7 +6,7 @@
 - errordict dict
 
 .SH DESCRIPTION
- pushes the dictionary object errordict on the operand stack .  errordict is not an operator; it is a name in 
+pushes the dictionary object errordict on the operand stack .  errordict is not an operator; it is a name in systemdict associated with the  dictionary object. 
 
 .SH EXAMPLE
 (NONE)
@@ -14,4 +14,5 @@
 .B  stackoverflow(3ps)
 
 .SH SEE ALSO
-(NONE)
+.B  $error(3ps)
+

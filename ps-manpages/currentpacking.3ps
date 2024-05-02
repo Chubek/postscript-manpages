@@ -6,7 +6,7 @@
 - currentpacking bool LEVEL 2
 
 .SH DESCRIPTION
- returns the array packing mode currently in effect. 
+returns the array packing mode currently in effect. 
 
 .SH EXAMPLE
 (NONE)

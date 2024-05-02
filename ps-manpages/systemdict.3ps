@@ -3,14 +3,17 @@
 
 
 .SH POSTFIX SIGNATURE
-
+globaldict
 
 .SH DESCRIPTION
-
+, and userdict . (In Level 1 implementations, cleardictstack is a procedure  defined in userdict instead of an operator defined in  systemdict.) 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  dictstackunderflow(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  begin(3ps)
+.B  end(3ps)
+

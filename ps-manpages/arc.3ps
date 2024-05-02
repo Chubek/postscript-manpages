@@ -6,19 +6,15 @@
 x y r ang1 ang2 arc -
 
 .SH DESCRIPTION
- appends a counterclockwise arc of a circle to the current path,  possibly preceded by a straight line segment. The arc has (x, y)  as center, r as radius, ang1 the angle of a vector from (x, y) of  length r to the first endpoint of the arc, and ang2 the angle of  a vector from (x, y) of length r to the second endpoint of the  arc. If there is a current point, the arc operator includes a straight  line segment from the current point to the first endpoint of this  arc and then adds the arc into the current path. If the current  path is empty, the arc operator does not produce the initial  straight line segment. In any event, the second endpoint of the  arc becomes the new current point. Angles are measured in degrees counterclockwise from the positive  x-axis of the current user coordinate system. The curve produced  is circular in user space. If user space is scaled non-uniformly  (i.e., differently in x and y) arc will produce elliptical curves  in device space. The operators that produce arcs ( represent them internally as one or more Bezier cubic curves.  This is done with sufficient accuracy that a faithful rendition  of an arc is produced. However, a program that reads the  constructed path using pathforall will encounter 
+appends a counterclockwise arc of a circle to the current path,  possibly preceded by a straight line segment. The arc has (x, y)  as center, r as radius, ang1 the angle of a vector from (x, y) of  length r to the first endpoint of the arc, and ang2 the angle of  a vector from (x, y) of length r to the second endpoint of the  arc. If there is a current point, the arc operator includes a straight  line segment from the current point to the first endpoint of this  arc and then adds the arc into the current path. If the current  path is empty, the arc operator does not produce the initial  straight line segment. In any event, the second endpoint of the  arc becomes the new current point. Angles are measured in degrees counterclockwise from the positive  x-axis of the current user coordinate system. The curve produced  is circular in user space. If user space is scaled non-uniformly  (i.e., differently in x and y) arc will produce elliptical curves  in device space. The operators that produce arcs ( arc arcn arct , and arcto represent them internally as one or more Bezier cubic curves.  This is done with sufficient accuracy that a faithful rendition  of an arc is produced. However, a program that reads the  constructed path using pathforall will encounter curveto segments where arcs were  specified originally. 
 
 .SH EXAMPLE
 .RI 
-
-
 newpath 0 0 moveto 0 0 1 0 45 arc closepath
-
- 
 
 This constructs a 1-unit radius, 45-degree &quot;pie\n      slice.&quot;
 
- 
+
 .RE 
 
 

@@ -6,7 +6,7 @@
 - currentglobal bool LEVEL 2
 
 .SH DESCRIPTION
- returns the VM allocation mode currently in effect. 
+returns the VM allocation mode currently in effect. 
 
 .SH EXAMPLE
 (NONE)

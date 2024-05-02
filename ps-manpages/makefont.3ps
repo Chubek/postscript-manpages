@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+scalefont
 
 .SH DESCRIPTION
-
+setfont defineresource FontDirectory GlobalFontDirectory setglobal 
 
 .SH EXAMPLE
 (NONE)

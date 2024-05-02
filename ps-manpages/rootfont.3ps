@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+selectfont
 
 .SH DESCRIPTION
-
+setfont 
 
 .SH EXAMPLE
 (NONE)

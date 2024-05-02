@@ -6,17 +6,15 @@
 int1 shift bitshift int2
 
 .SH DESCRIPTION
- shifts the binary representation of int1 left by shift bits and  returns the result. Bits shifted out are lost; bits shifted in  are zero. If shift is negative, then a right shift by -shift bits  is performed. This produces an arithmetically correct result only  for positive values of int1. Both int1 and shift must be  integers. 
+shifts the binary representation of int1 left by shift bits and  returns the result. Bits shifted out are lost; bits shifted in  are zero. If shift is negative, then a right shift by -shift bits  is performed. This produces an arithmetically correct result only  for positive values of int1. Both int1 and shift must be  integers. 
 
 .SH EXAMPLE
 .RI 
-
-
 7 3 bitshift -&gt; 56
 
 142 -3 bitshift -&gt; 17
 
- 
+
 .RE 
 
 

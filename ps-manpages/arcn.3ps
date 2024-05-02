@@ -3,22 +3,18 @@
 
 
 .SH POSTFIX SIGNATURE
-segments where arcs were\n      specified originally.
+arct
 
 .SH DESCRIPTION
- 
+, and arcto represent them internally as one or more Bezier cubic curves.  This is done with sufficient accuracy that a faithful rendition  of an arc is produced. However, a program that reads the  constructed path using pathforall will encounter curveto segments where arcs were  specified originally. 
 
 .SH EXAMPLE
 .RI 
-
-
 newpath 0 0 moveto 0 0 1 0 45 arc closepath
-
- 
 
 This constructs a 1-unit radius, 45-degree &quot;pie\n      slice.&quot;
 
- 
+
 .RE 
 
 
@@ -28,6 +24,7 @@ This constructs a 1-unit radius, 45-degree &quot;pie\n      slice.&quot;
 .B  typecheck(3ps)
 
 .SH SEE ALSO
+.B  arcn(3ps)
 .B  arct(3ps)
 .B  arcto(3ps)
 .B  curveto(3ps)

@@ -6,12 +6,10 @@
 bool1 bool2 and bool3
 
 .SH DESCRIPTION
- int1 int1 and int1 If the operands are booleans, and returns their logical  conjunction. If the operands are integers, and returns the  bitwise and of their binary representations. 
+int1 int1 and int1 If the operands are booleans, and returns their logical  conjunction. If the operands are integers, and returns the  bitwise and of their binary representations. 
 
 .SH EXAMPLE
 .RI 
-
-
 true true and true % a complete truth table
 
 true false and false
@@ -20,13 +18,11 @@ false true and false
 
 false false and false
 
- 
-
 99 1 and 1
 
 52 7 and 4
 
- 
+
 .RE 
 
 

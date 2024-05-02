@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-, 
+xor
 
 .SH DESCRIPTION
-
+not true false 
 
 .SH EXAMPLE
 (NONE)

@@ -6,7 +6,7 @@
 dx dy dtransform dx` dy`
 
 .SH DESCRIPTION
- dx dy matrix dtransform dx` dy` With no matrix operand, dtransform (delta transform) transforms  the distance vector (dx, dy) by the CTM to produce the  corresponding distance vector (dx`, dy`) in device space. If the  matrix operand is supplied, dtransform transforms the distance  vector by matrix rather than by CTM. A delta transformation is similar to a normal transformation ,  but the translation components (tx and ty) of the transformation  matrix are not used, making the distance vectors positionless in  both user space and device space. This is useful for determining  how distances map from user space to device space. 
+dx dy matrix dtransform dx` dy` With no matrix operand, dtransform (delta transform) transforms  the distance vector (dx, dy) by the CTM to produce the  corresponding distance vector (dx`, dy`) in device space. If the  matrix operand is supplied, dtransform transforms the distance  vector by matrix rather than by CTM. A delta transformation is similar to a normal transformation ,  but the translation components (tx and ty) of the transformation  matrix are not used, making the distance vectors positionless in  both user space and device space. This is useful for determining  how distances map from user space to device space. 
 
 .SH EXAMPLE
 (NONE)

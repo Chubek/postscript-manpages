@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+.
 
 .SH DESCRIPTION
 
@@ -11,6 +11,13 @@
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  invalidaccess(3ps)
+.B  limitcheck(3ps)
+.B  rangecheck(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  inufill(3ps)
+.B  eofill(3ps)
+

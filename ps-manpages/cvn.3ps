@@ -6,17 +6,15 @@
 string cvn name
 
 .SH DESCRIPTION
- (convert to name) converts the string operand to a name object  that is lexically the same as the string. The name object is  executable if the string was. 
+(convert to name) converts the string operand to a name object  that is lexically the same as the string. The name object is  executable if the string was. 
 
 .SH EXAMPLE
 .RI 
-
-
 (abc) cvn -&gt; /abc
 
 (abc) cvx cvn -&gt; abc
 
- 
+
 .RE 
 
 

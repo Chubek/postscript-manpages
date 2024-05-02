@@ -6,7 +6,7 @@
 or as a &quot;color\n      value&quot; in the Pattern color space.
 
 .SH DESCRIPTION
- 
+
 
 .SH EXAMPLE
 (NONE)
@@ -15,7 +15,10 @@ or as a &quot;color\n      value&quot; in the Pattern color space.
 .B  rangecheck(3ps)
 .B  stackunderflow(3ps)
 .B  typecheck(3ps)
+.B  undefined,(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
+.B  setpattern(3ps)
 .B  findresource(3ps)
 

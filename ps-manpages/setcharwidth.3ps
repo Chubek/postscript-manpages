@@ -6,7 +6,7 @@
 before executing graphics\n      operators to define and paint the character. setcachedevice\n      requests the font machinery to transfer the results of those\n      operators both into the font cache, if possible, and onto the\n      current page. The operands to setcachedevice are all numbers\n      interpreted in the character coordinate system .
 
 .SH DESCRIPTION
- wx and wy comprise the basic width vector for this character-in  other words, the normal position of the origin of the next  character relative to origin of this one. llx and lly are the  coordinates of the lower-left corner and urx and ury are the  coordinates of the upper-right corner of the character bounding  box. The character bounding box is the smallest rectangle,  oriented with the character coordinate system axes, that  completely encloses all marks placed on the page as a result of  executing the character\#39;s description. For a character defined as a path, this may be determined by  means of the pathbbox operator. The font machinery needs this  information to make decisions about clipping and caching. The  declared bounding box must be correct-in other words,  sufficiently large to enclose the entire character. If any marks  fall outside this bounding box, they will be clipped off and not  moved to the current page. setcachedevice installs identical sets  of metrics for writing modes 0 and 1, while After execution of setcachedevice and until the termination of  the BuildGlyph or BuildChar procedure, execution of color setting  operators or image is not allowed. Note that use of the 
+wx and wy comprise the basic width vector for this character-in  other words, the normal position of the origin of the next  character relative to origin of this one. llx and lly are the  coordinates of the lower-left corner and urx and ury are the  coordinates of the upper-right corner of the character bounding  box. The character bounding box is the smallest rectangle,  oriented with the character coordinate system axes, that  completely encloses all marks placed on the page as a result of  executing the character\#39;s description. For a character defined as a path, this may be determined by  means of the pathbbox operator. The font machinery needs this  information to make decisions about clipping and caching. The  declared bounding box must be correct-in other words,  sufficiently large to enclose the entire character. If any marks  fall outside this bounding box, they will be clipped off and not  moved to the current page. setcachedevice installs identical sets  of metrics for writing modes 0 and 1, while setcachedevice2 installs separate  metrics. After execution of setcachedevice and until the termination of  the BuildGlyph or BuildChar procedure, execution of color setting  operators or image is not allowed. Note that use of the imagemask operator is  permitted. 
 
 .SH EXAMPLE
 (NONE)
@@ -16,6 +16,8 @@ before executing graphics\n      operators to define and paint the character. se
 .B  undefined(3ps)
 
 .SH SEE ALSO
+.B  setcachedevice2(3ps)
+.B  setcharwidth(3ps)
 .B  setcachelimit(3ps)
 .B  cachestatus(3ps)
 

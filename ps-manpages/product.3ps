@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+revision
 
 .SH DESCRIPTION
-
+serialnumber version 
 
 .SH EXAMPLE
 (NONE)

@@ -6,15 +6,13 @@
 any1 any2 exch any2 any1
 
 .SH DESCRIPTION
- exchanges the top two elements on the operand stack. 
+exchanges the top two elements on the operand stack. 
 
 .SH EXAMPLE
 .RI 
-
-
 1 2 exch -&gt; 2 1
 
- 
+
 .RE 
 
 

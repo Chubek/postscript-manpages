@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-work strictly in a\n      stack-like fashion, except for the wholesale restoration\n      performed by 
+, gsave\n      does not return a save object on the operand stack to represent\n      the saved state. gsave and\n\n    
 
 .SH DESCRIPTION
- 
+grestore work strictly in a  stack-like fashion, except for the wholesale restoration  performed by restore and grestoreall . 
 
 .SH EXAMPLE
 (NONE)
@@ -17,6 +17,7 @@ work strictly in a\n      stack-like fashion, except for the wholesale restorati
 .B  grestore(3ps)
 .B  grestoreall(3ps)
 .B  restore(3ps)
+.B  save(3ps)
 .B  gstate(3ps)
 .B  currentgstate(3ps)
 

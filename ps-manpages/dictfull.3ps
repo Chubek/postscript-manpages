@@ -3,14 +3,16 @@
 
 
 .SH POSTFIX SIGNATURE
-
+invalidaccess
 
 .SH DESCRIPTION
-
+limitcheck stackunderflow typecheck VMerror 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  store(3ps)
+.B  put(3ps)
+

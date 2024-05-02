@@ -6,14 +6,10 @@
 dict key known bool
 
 .SH DESCRIPTION
- returns the boolean value true if there is an entry in the  dictionary dict whose key is key. Otherwise, it returns false.  dict does not have to be on the dictionary stack. 
+returns the boolean value true if there is an entry in the  dictionary dict whose key is key. Otherwise, it returns false.  dict does not have to be on the dictionary stack. 
 
 .SH EXAMPLE
 .RI 
-
-
- 
-
 /mydict 5 dict def
 
 mydict /total 0 put
@@ -22,7 +18,7 @@ mydict /total known -&gt; true
 
 mydict /badname known -&gt; false
 
- 
+
 .RE 
 
 

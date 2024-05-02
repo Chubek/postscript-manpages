@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-instead of 
+, but its\n      &quot;insideness&quot; test is based on 
 
 .SH DESCRIPTION
- 
+ueofill instead of ufill . 
 
 .SH EXAMPLE
 (NONE)
@@ -18,5 +18,6 @@ instead of
 .B  typecheck(3ps)
 
 .SH SEE ALSO
+.B  inufill(3ps)
 .B  eofill(3ps)
 

@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-operator can\n      also be used to reset the clipping path to an earlier state.
+. The grestore will\n      restore the clipping path that was in effect before the gsave.\n      The 
 
 .SH DESCRIPTION
- Unlike 
+setgstate operator can  also be used to reset the clipping path to an earlier state. Unlike fill and stroke , clip does not implicitly  perform a newpath after it  has finished using the current path. Any subsequent path  construction operators will append to the current path unless  newpath is executed explicitly. This can cause unexpected  behavior. 
 
 .SH EXAMPLE
 (NONE)

@@ -6,7 +6,7 @@
 - currentcolorrendering dict LEVEL\n      2
 
 .SH DESCRIPTION
- returns the value of the CIE based color rendering dictionary  parameter in the graphics state. 
+returns the value of the CIE based color rendering dictionary  parameter in the graphics state. 
 
 .SH EXAMPLE
 (NONE)

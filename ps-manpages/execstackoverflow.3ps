@@ -6,7 +6,7 @@
 (error)
 
 .SH DESCRIPTION
- The execution stack has grown too large; procedure invocation is  nested deeper than the PostScript interpreter permits. 
+The execution stack has grown too large; procedure invocation is  nested deeper than the PostScript interpreter permits. 
 
 .SH EXAMPLE
 (NONE)

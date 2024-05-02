@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+echo
 
 .SH DESCRIPTION
-
+file 
 
 .SH EXAMPLE
 (NONE)

@@ -6,7 +6,7 @@
 any scheck bool LEVEL 2
 
 .SH DESCRIPTION
- has the same semantics as gcheck. This operator is defined for  compatibility with existing Display PostScript applications. 
+has the same semantics as gcheck. This operator is defined for  compatibility with existing Display PostScript applications. 
 
 .SH EXAMPLE
 (NONE)

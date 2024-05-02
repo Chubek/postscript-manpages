@@ -3,14 +3,17 @@
 
 
 .SH POSTFIX SIGNATURE
-
+stackunderflow
 
 .SH DESCRIPTION
-
+typecheck VMerror 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  aload(3ps)
+.B  astore(3ps)
+.B  packedarray(3ps)
+

@@ -6,7 +6,7 @@
 - currentcacheparams mark size lower\n      upper LEVEL 2
 
 .SH DESCRIPTION
- pushes a mark object followed by the current cache parameters on  the operand stack. The number of cache parameters returned is  variable (see 
+pushes a mark object followed by the current cache parameters on  the operand stack. The number of cache parameters returned is  variable (see setcacheparams ). 
 
 .SH EXAMPLE
 (NONE)

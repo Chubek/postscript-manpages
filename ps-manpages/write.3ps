@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+flush
 
 .SH DESCRIPTION
-
+= == printobject 
 
 .SH EXAMPLE
 (NONE)

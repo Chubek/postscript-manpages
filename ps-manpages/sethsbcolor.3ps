@@ -3,14 +3,19 @@
 
 
 .SH POSTFIX SIGNATURE
-
+setrgbcolor
 
 .SH DESCRIPTION
-
+, or setcolor , converting them from  RGB to HSB coordinates if necessary. If the current color space  is DeviceGray or DeviceCMYK, currenthsbcolor first converts the  current color to RGB. For any other color space, currenthsbcolor returns 0.0 0.0  0.0. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  stackoverflow(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  sethsbcolor(3ps)
+.B  currentcolor(3ps)
+.B  currentgray(3ps)
+.B  currentrgbcolor(3ps)
+

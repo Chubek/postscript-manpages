@@ -6,7 +6,7 @@
 any1 ... anyn clear
 
 .SH DESCRIPTION
- pops all objects from the operand stack and discards them. 
+pops all objects from the operand stack and discards them. 
 
 .SH EXAMPLE
 (NONE)

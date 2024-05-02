@@ -6,7 +6,7 @@
 - cleardictstack -
 
 .SH DESCRIPTION
- pops all dictionaries off the dictionary stack except for the  permanent entries. In Level 1 implementations the permanent  entries are systemdict and userdict; in Level 2 they are (In Level 1 implementations, cleardictstack is a procedure  defined in userdict instead of an operator defined in  systemdict.) 
+pops all dictionaries off the dictionary stack except for the  permanent entries. In Level 1 implementations the permanent  entries are systemdict and userdict; in Level 2 they are systemdict globaldict , and userdict . (In Level 1 implementations, cleardictstack is a procedure  defined in userdict instead of an operator defined in  systemdict.) 
 
 .SH EXAMPLE
 (NONE)

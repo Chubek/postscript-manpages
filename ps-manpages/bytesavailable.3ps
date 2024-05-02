@@ -6,7 +6,7 @@
 file bytesavailable int
 
 .SH DESCRIPTION
- returns the number of bytes that are immediately available for  reading from file without waiting. The result is -1 if end-of-file has been encountered or if the  number of bytes available cannot be determined for other  reasons. 
+returns the number of bytes that are immediately available for  reading from file without waiting. The result is -1 if end-of-file has been encountered or if the  number of bytes available cannot be determined for other  reasons. 
 
 .SH EXAMPLE
 (NONE)

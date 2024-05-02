@@ -6,17 +6,15 @@
 base exponent exp real
 
 .SH DESCRIPTION
- raises base to the exponent power. The operands may be either  integers or reals. If the exponent has a fractional part, the  result is meaningful only if the base is non-negative. The result  is always a real. 
+raises base to the exponent power. The operands may be either  integers or reals. If the exponent has a fractional part, the  result is meaningful only if the base is non-negative. The result  is always a real. 
 
 .SH EXAMPLE
 .RI 
-
-
 9 0.5 exp -&gt; 3.0
 
 -9 -1 exp -&gt; -0.111111
 
- 
+
 .RE 
 
 

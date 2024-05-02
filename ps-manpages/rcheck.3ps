@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+wcheck
 
 .SH DESCRIPTION
-
+xcheck readonly noaccess 
 
 .SH EXAMPLE
 (NONE)

@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+currentcolor
 
 .SH DESCRIPTION
-
+currentcolorspace currenthsbcolor currentrgbcolor 
 
 .SH EXAMPLE
 (NONE)

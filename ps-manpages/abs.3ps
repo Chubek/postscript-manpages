@@ -31,19 +31,17 @@
 num1 abs num2
 
 .SH DESCRIPTION
- returns the absolute value of num1. The type of the result is the same as the type of num1 unless  num1 is the most negative integer, in which case the result is a  real. 
+returns the absolute value of num1. The type of the result is the same as the type of num1 unless  num1 is the most negative integer, in which case the result is a  real. 
 
 .SH EXAMPLE
 .RI 
-
-
 4.5 abs 4.5
 
 -3 abs 3
 
 0 abs 0
 
- 
+
 .RE 
 
 

@@ -6,12 +6,13 @@
 - currentpagedevice dict LEVEL 2
 
 .SH DESCRIPTION
- returns a read-only dictionary that describes the page-oriented  output device in the current graphics state. currentpagedevice  creates a new dictionary if necessary. If the device in the  current graphics state is not a page device, currentpagedevice  returns an empty dictionary (length of 0). Changes made to the hardware state of the output device since the  last execution of 
+returns a read-only dictionary that describes the page-oriented  output device in the current graphics state. currentpagedevice  creates a new dictionary if necessary. If the device in the  current graphics state is not a page device, currentpagedevice  returns an empty dictionary (length of 0). Changes made to the hardware state of the output device since the  last execution of setpagedevice , such as changing paper trays or switches,  are not immediately reflected in this dictionary. If the current  context is under the control of a job server, the server sets up  a device that matches the hardware state before starting each  job. At the beginning of each job, therefore, the dictionary  currentpagedevice returns matches the current hardware state. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 .B  stackoverflow(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
 .B  setpagedevice(3ps)

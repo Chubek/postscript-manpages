@@ -6,7 +6,7 @@
 dict key undef - LEVEL 2
 
 .SH DESCRIPTION
- removes key and its associated value from the dictionary dict.  dict does not need to be on the dictionary stack. No error occurs if key is not present in dict. If the value of dict is in local VM, the effect of undef can be  undone by a subsequent restore. That is, if key was present in dict at the time of the matching  save, restore will reinstate key and its former value. But if dict is in global VM, the effect of undef is permanent. 
+removes key and its associated value from the dictionary dict.  dict does not need to be on the dictionary stack. No error occurs if key is not present in dict. If the value of dict is in local VM, the effect of undef can be  undone by a subsequent restore. That is, if key was present in dict at the time of the matching  save, restore will reinstate key and its former value. But if dict is in global VM, the effect of undef is permanent. 
 
 .SH EXAMPLE
 (NONE)

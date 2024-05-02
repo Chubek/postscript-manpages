@@ -6,7 +6,7 @@
 - currentstrokeadjust bool LEVEL\n      2
 
 .SH DESCRIPTION
- returns the current stroke adjust parameter in the graphics  state. 
+returns the current stroke adjust parameter in the graphics  state. 
 
 .SH EXAMPLE
 (NONE)

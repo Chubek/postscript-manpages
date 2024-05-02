@@ -6,7 +6,7 @@
 - currentobjectformat int LEVEL 2
 
 .SH DESCRIPTION
- returns the object format parameter currently in effect. 
+returns the object format parameter currently in effect. 
 
 .SH EXAMPLE
 (NONE)

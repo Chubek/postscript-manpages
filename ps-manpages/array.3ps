@@ -6,15 +6,13 @@
 int array array
 
 .SH DESCRIPTION
- creates an array of length int, each of whose elements is  initialized with a null object, and pushes this array on the  operand stack. The int operand must be a non-negative integer not  greater than the maximum allowable array length . The array is  allocated in local or global VM according to the current VM  allocation mode. 
+creates an array of length int, each of whose elements is  initialized with a null object, and pushes this array on the  operand stack. The int operand must be a non-negative integer not  greater than the maximum allowable array length . The array is  allocated in local or global VM according to the current VM  allocation mode. 
 
 .SH EXAMPLE
 .RI 
-
-
 3 array [null null null]
 
- 
+
 .RE 
 
 
@@ -23,6 +21,7 @@ int array array
 .B  rangecheck(3ps)
 .B  stackunderflow(3ps)
 .B  typecheck(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
 .B  aload(3ps)

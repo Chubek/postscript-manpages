@@ -6,17 +6,13 @@
 any1 any2 eq bool
 
 .SH DESCRIPTION
- pops two objects from the operand stack and pushes the boolean  value Some type conversions are performed by eq. Integers and reals can  be compared freely: An integer and a real representing the same  mathematical value are considered equal by eq. Strings and names  can likewise be compared freely: A name defined by some sequence  of characters is equal to a string whose elements are the same  sequence of characters. The literal/executable and access attributes of objects are not  considered in comparisons between objects. 
+pops two objects from the operand stack and pushes the boolean  value true if they are equal, false if not. The definition of  equality depends on the types of the objects being compared.  Simple objects are equal if their types and values are the same.  Strings are equal if their lengths and individual elements are  equal. Other composite objects (arrays and dictionaries) are  equal only if they share the same value. Separate values are  considered unequal, even if all the components of those values  are the same. Some type conversions are performed by eq. Integers and reals can  be compared freely: An integer and a real representing the same  mathematical value are considered equal by eq. Strings and names  can likewise be compared freely: A name defined by some sequence  of characters is equal to a string whose elements are the same  sequence of characters. The literal/executable and access attributes of objects are not  considered in comparisons between objects. 
 
 .SH EXAMPLE
 .RI 
-
-
 4.0 4 eq -&gt; true % A real and an integer may be equal
 
 (abc) (abc) eq -&gt; true % Strings with equal elements are\n      equal
-
- 
 
 (abc) /abc eq -&gt; true % A string and a name may be equal
 
@@ -24,7 +20,7 @@ any1 any2 eq bool
 
 [1 2 3] [1 2 3] eq -&gt; false % Distinct array objects not\n      equal
 
- 
+
 .RE 
 
 

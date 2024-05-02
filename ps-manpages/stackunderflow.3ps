@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+typecheck
 
 .SH DESCRIPTION
 
@@ -13,4 +13,5 @@
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  neg(3ps)
+

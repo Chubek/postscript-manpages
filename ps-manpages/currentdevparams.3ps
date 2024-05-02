@@ -6,12 +6,13 @@
 string currentdevparams dict LEVEL 2
 
 .SH DESCRIPTION
- returns a dictionary containing the keys and current values of  all parameters for the device identified by string. The returned  dictionary is merely a container for key-value pairs. Each  execution of currentdevparams allocates and returns a new  dictionary. 
+returns a dictionary containing the keys and current values of  all parameters for the device identified by string. The returned  dictionary is merely a container for key-value pairs. Each  execution of currentdevparams allocates and returns a new  dictionary. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 .B  stackoverflow(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
 .B  setdevparams(3ps)

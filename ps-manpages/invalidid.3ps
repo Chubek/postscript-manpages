@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+showpage
 
 .SH DESCRIPTION
-
+clippath fill copypage 
 
 .SH EXAMPLE
 (NONE)

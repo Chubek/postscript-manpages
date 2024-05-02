@@ -6,7 +6,7 @@
 error occurs. If the device does not\n      allow this operation, an 
 
 .SH DESCRIPTION
- occurs. 
+invalidfileaccess error occurs. If an environment dependent  error is detected, an ioerror occurs. 
 
 .SH EXAMPLE
 (NONE)
@@ -15,6 +15,7 @@ error occurs. If the device does not\n      allow this operation, an
 .B  ioerror(3ps)
 .B  stackunderflow(3ps)
 .B  typecheck(3ps)
+.B  undefinedfilename(3ps)
 
 .SH SEE ALSO
 .B  file(3ps)

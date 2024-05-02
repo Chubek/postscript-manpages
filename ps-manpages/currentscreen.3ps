@@ -6,7 +6,7 @@
 - currentscreen frequency angle proc
 
 .SH DESCRIPTION
- - currentscreen 60 0 halftone returns the current halftone screen parameters (frequency, angle,  and proc) in the graphics state, assuming the current screen was  established by setscreen. If If 
+- currentscreen 60 0 halftone returns the current halftone screen parameters (frequency, angle,  and proc) in the graphics state, assuming the current screen was  established by setscreen. If setcolorscreen was executed, currentscreen returns the  parameters for the gray screen. If sethalftone was  executed, currentscreen returns a frequency of 60, an angle of 0,  and the halftone dictionary. 
 
 .SH EXAMPLE
 (NONE)

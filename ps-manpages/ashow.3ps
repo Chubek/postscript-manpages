@@ -6,19 +6,17 @@
 ax ay string ashow -
 
 .SH DESCRIPTION
- paints the characters of string in a manner similar to This operator enables a string of text to be fitted to a specific  width by adjusting all the spaces between characters by a uniform  amount. 
+paints the characters of string in a manner similar to show . But while doing so, ashow  adjusts the width of each character shown by adding ax to the  character\#39;s x width and ay to its y width, thus modifying the  spacing between characters. The numbers ax and ay are x and y  displacements in the user coordinate system, not in the character  coordinate system. This operator enables a string of text to be fitted to a specific  width by adjusting all the spaces between characters by a uniform  amount. 
 
 .SH EXAMPLE
 .RI 
-
-
 /Helvetica findfont 12 scalefont setfont
 
 14 61 moveto (Normal spacing) show
 
 14 47 moveto 4 0 (Wide spacing) ashow
 
- 
+
 .RE 
 
 

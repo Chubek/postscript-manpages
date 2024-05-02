@@ -6,7 +6,7 @@
 (error) LEVEL 2
 
 .SH DESCRIPTION
- occurs when When a configurationerror is generated, a two-element array  called errorinfo is placed in 
+occurs when setpagedevice or setdevparams has  been executed with a request for a feature that either is not  available in the interpreter implementation or is not currently  available because of the state of the hardware. For setpagedevice , this error  is generated only if the PolicyDict entry in a page device  dictionary specifies that an error should be generated. When a configurationerror is generated, a two-element array  called errorinfo is placed in $error . This array contains the key and value of the  request that could not be met. 
 
 .SH EXAMPLE
 (NONE)

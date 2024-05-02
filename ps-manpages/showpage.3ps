@@ -3,15 +3,16 @@
 
 
 .SH POSTFIX SIGNATURE
-or the NumCopies parameter of 
+.
 
 .SH DESCRIPTION
- 
+copypage is intended primarily as a debugging aid or as a means  of printing successive pages with incrementally accumulated  contents. Routine use of copypage as a substitute for showpage  may severely degrade the page throughput of some PostScript  printers. To print multiple copies of the same page, use  the#copies implicit parameter of showpage or the NumCopies parameter of setpagedevice . 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
+.B  showpage(3ps)
 .B  erasepage(3ps)
 

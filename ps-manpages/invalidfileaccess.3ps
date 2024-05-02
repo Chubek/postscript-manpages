@@ -6,11 +6,12 @@
 error occurs. If an environment dependent\n      error is detected, an 
 
 .SH DESCRIPTION
- occurs. 
+ioerror occurs. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
+.B  invalidfileaccess(3ps)
 .B  ioerror(3ps)
 .B  stackunderflow(3ps)
 .B  typecheck(3ps)

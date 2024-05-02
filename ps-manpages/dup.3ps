@@ -6,17 +6,15 @@
 and other operators that copy\n      only the objects themselves . However, copy performs only one\n      level of copying. It does not apply recursively to elements that\n      are themselves composite objects; instead, the values of those\n      elements become shared.
 
 .SH DESCRIPTION
- In the case of arrays or strings, the length of the second object  must be at least as great as the first; copy returns the initial  subarray or substring of the second operand into which the  elements were copied. Any remaining elements of array2 or string2  are unaffected. copy cannot copy into packed arrays, because they  are read-only, but it can copy packed arrays into ordinary  arrays. In the case of dictionaries, Level 1 implementations require that  dict2 have a length of zero and a maxlength at least as great as  the length of dict1. Level 2 implementations do not impose this  restriction, since dictionaries can expand when necessary. The attributes (literal or executable and access) of the result  are normally the same as those of the second operand. However, in  Level 1 implementations, the access attribute of dict2 is copied  from that of dict1. If the value of the destination object is in global VM and any of  the elements copied from the source object are composite objects  whose values are in local VM, an 
+In the case of arrays or strings, the length of the second object  must be at least as great as the first; copy returns the initial  subarray or substring of the second operand into which the  elements were copied. Any remaining elements of array2 or string2  are unaffected. copy cannot copy into packed arrays, because they  are read-only, but it can copy packed arrays into ordinary  arrays. In the case of dictionaries, Level 1 implementations require that  dict2 have a length of zero and a maxlength at least as great as  the length of dict1. Level 2 implementations do not impose this  restriction, since dictionaries can expand when necessary. The attributes (literal or executable and access) of the result  are normally the same as those of the second operand. However, in  Level 1 implementations, the access attribute of dict2 is copied  from that of dict1. If the value of the destination object is in global VM and any of  the elements copied from the source object are composite objects  whose values are in local VM, an invalidaccess error occurs  . 
 
 .SH EXAMPLE
 .RI 
-
-
 /a1 [1 2 3] def
 
 a1 dup length array copy -&gt; [1 2 3]
 
- 
+
 .RE 
 
 
@@ -28,6 +26,7 @@ a1 dup length array copy -&gt; [1 2 3]
 .B  typecheck(3ps)
 
 .SH SEE ALSO
+.B  dup(3ps)
 .B  get(3ps)
 .B  put(3ps)
 .B  putinterval(3ps)

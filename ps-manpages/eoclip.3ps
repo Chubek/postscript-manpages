@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+clippath
 
 .SH DESCRIPTION
-
+initclip rectclip 
 
 .SH EXAMPLE
 (NONE)

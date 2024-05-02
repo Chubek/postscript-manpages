@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+findresource
 
 .SH DESCRIPTION
-
+resourcestatus resourceforall 
 
 .SH EXAMPLE
 (NONE)

@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+stroke
 
 .SH DESCRIPTION
-
+currentlinejoin 
 
 .SH EXAMPLE
 (NONE)

@@ -3,14 +3,37 @@
 
 
 .SH POSTFIX SIGNATURE
-
+. But while doing so, ashow\n      adjusts the width of each character shown by adding ax to the\n      character\#39;s x width and ay to its y width, thus modifying the\n      spacing between characters. The numbers ax and ay are x and y\n      displacements in the user coordinate system, not in the character\n      coordinate system.
 
 .SH DESCRIPTION
-
+This operator enables a string of text to be fitted to a specific  width by adjusting all the spaces between characters by a uniform  amount. 
 
 .SH EXAMPLE
-(NONE)
+.RI 
+/Helvetica findfont 12 scalefont setfont
+
+14 61 moveto (Normal spacing) show
+
+14 47 moveto 4 0 (Wide spacing) ashow
+
+
+.RE 
+
+
 .SH ERRORS
-(NONE)
+.B  invalidaccess(3ps)
+.B  invalidfont(3ps)
+.B  nocurrentpoint(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  show(3ps)
+.B  awidthshow(3ps)
+.B  cshow(3ps)
+.B  kshow(3ps)
+.B  widthshow(3ps)
+.B  xshow(3ps)
+.B  xyshow(3ps)
+.B  yshow(3ps)
+

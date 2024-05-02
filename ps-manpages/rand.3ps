@@ -6,7 +6,7 @@
 - rand int
 
 .SH DESCRIPTION
- returns a random integer in the range 0 to 231 - 1, produced by a  pseudo-random number generator. The random number generator\#39;s  state can be reset by 
+returns a random integer in the range 0 to 231 - 1, produced by a  pseudo-random number generator. The random number generator\#39;s  state can be reset by srand and  interrogated by rrand . 
 
 .SH EXAMPLE
 (NONE)

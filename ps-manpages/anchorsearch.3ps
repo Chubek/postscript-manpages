@@ -6,12 +6,10 @@
 string seek anchorsearch
 
 .SH DESCRIPTION
- post match true (if found) string false (if not found) determines if the string seek matches the initial substring of  string (that is, string is at least as long as seek and the  corresponding characters are equal). If it matches, anchorsearch splits string into two segments:  match, the portion of string that matches seek, and post, the  remainder of string; it then pushes the string objects post and  match and the boolean 
+post match true (if found) string false (if not found) determines if the string seek matches the initial substring of  string (that is, string is at least as long as seek and the  corresponding characters are equal). If it matches, anchorsearch splits string into two segments:  match, the portion of string that matches seek, and post, the  remainder of string; it then pushes the string objects post and  match and the boolean true . If  not, anchorsearch pushes the original string and the boolean  false. anchorsearch is a special case of the search operator. 
 
 .SH EXAMPLE
 .RI 
-
-
 (abbc) (ab) anchorsearch (bc) (ab) true
 
 (abbc) (bb) anchorsearch (abbc) false
@@ -20,7 +18,7 @@ string seek anchorsearch
 
 (abbc) (B) anchorsearch (abbc) false
 
- 
+
 .RE 
 
 

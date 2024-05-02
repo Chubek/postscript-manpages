@@ -6,7 +6,7 @@
 - wtranslation x y DPS
 
 .SH DESCRIPTION
- returns the translation from the window origin to the PostScript  interpreter\#39;s device space origin. The integers x and y are  the amounts that need to be added to a window system coordinate  to produce the device space coordinate for the same position. That coordinate may in turn be transformed to user space by the  itransform operator. Window system and device space coordinates  always correspond in resolution and orientation; they differ only  in the positions of their origins. The translation from one  origin to the other may change as windows are moved and resized.  The precise behavior is window system specific. 
+returns the translation from the window origin to the PostScript  interpreter\#39;s device space origin. The integers x and y are  the amounts that need to be added to a window system coordinate  to produce the device space coordinate for the same position. That coordinate may in turn be transformed to user space by the  itransform operator. Window system and device space coordinates  always correspond in resolution and orientation; they differ only  in the positions of their origins. The translation from one  origin to the other may change as windows are moved and resized.  The precise behavior is window system specific. 
 
 .SH EXAMPLE
 (NONE)

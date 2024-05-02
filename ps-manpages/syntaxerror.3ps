@@ -3,14 +3,19 @@
 
 
 .SH POSTFIX SIGNATURE
-
+typecheck
 
 .SH DESCRIPTION
-
+undefinedresult 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  cvr(3ps)
+.B  ceiling(3ps)
+.B  floor(3ps)
+.B  round(3ps)
+.B  truncate(3ps)
+

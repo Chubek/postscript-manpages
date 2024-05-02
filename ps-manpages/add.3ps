@@ -6,21 +6,15 @@
 num1 num2 add sum
 
 .SH DESCRIPTION
- returns the sum of num1 and num2. If both operands are integers and the result is within integer  range, the result is an integer; otherwise, the result is a  real. 
+returns the sum of num1 and num2. If both operands are integers and the result is within integer  range, the result is an integer; otherwise, the result is a  real. 
 
 .SH EXAMPLE
 .RI 
-
-
- 
-
 3 4 add 7
-
- 
 
 9.9 1.1 add 11.0
 
- 
+
 .RE 
 
 

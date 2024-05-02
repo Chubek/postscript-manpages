@@ -6,12 +6,13 @@
 - currenthalftone halftone LEVEL 2
 
 .SH DESCRIPTION
- returns the current halftone dictionary in the graphics state. If  the current halftone was defined by setscreen or setcolorscreen  instead of by sethalftone, currenthalftone fabricates and returns  a halftone dictionary (type 1 or 2) that contains the screen  parameters. 
+returns the current halftone dictionary in the graphics state. If  the current halftone was defined by setscreen or setcolorscreen  instead of by sethalftone, currenthalftone fabricates and returns  a halftone dictionary (type 1 or 2) that contains the screen  parameters. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 .B  stackoverflow(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
 .B  setscreen(3ps)

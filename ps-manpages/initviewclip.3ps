@@ -6,7 +6,7 @@
 - initviewclip - DPS
 
 .SH DESCRIPTION
- returns the context to its initial view clipping state, in which  no view clipping path exists. 
+returns the context to its initial view clipping state, in which  no view clipping path exists. 
 
 .SH EXAMPLE
 (NONE)

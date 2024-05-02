@@ -6,7 +6,7 @@
 has\n      been executed with a request for a feature that either is not\n      available in the interpreter implementation or is not currently\n      available because of the state of the hardware. For 
 
 .SH DESCRIPTION
- When a configurationerror is generated, a two-element array  called errorinfo is placed in 
+setpagedevice , this error  is generated only if the PolicyDict entry in a page device  dictionary specifies that an error should be generated. When a configurationerror is generated, a two-element array  called errorinfo is placed in $error . This array contains the key and value of the  request that could not be met. 
 
 .SH EXAMPLE
 (NONE)
@@ -14,4 +14,5 @@ has\n      been executed with a request for a feature that either is not\n      
 (NONE)
 .SH SEE ALSO
 .B  setpagedevice(3ps)
+.B  setdevparams(3ps)
 

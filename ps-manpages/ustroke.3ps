@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-of\n      userpath2. Otherwise it returns false.
+applied to the same operands. Otherwise it returns 
 
 .SH DESCRIPTION
- This operator does not place any marks on the current page nor  does it disturb the current path in the graphics state. Except  for the manner in which the path is specified, inustroke behaves  the same as As with 
+false . In the second form, inustroke concatenates matrix to the CTM  after interpreting the user paths, but before computing the  stroke (see ustroke operator). In the third and fourth forms, the device pixels that would be  painted by filling userpath1 become an &quot;aperture.&quot;  inustroke returns true if any of the pixels in the aperture would  be painted by a ustroke of  userpath2. Otherwise it returns false. This operator does not place any marks on the current page nor  does it disturb the current path in the graphics state. Except  for the manner in which the path is specified, inustroke behaves  the same as instroke . As with inufill , if userpath is already  present in the user path cache, inustroke can take advantage of  the cached information to optimize execution. 
 
 .SH EXAMPLE
 (NONE)
@@ -19,5 +19,6 @@ of\n      userpath2. Otherwise it returns false.
 
 .SH SEE ALSO
 .B  stroke(3ps)
+.B  ustroke(3ps)
 .B  instroke(3ps)
 

@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+, pathbbox returns a result derived from that\n      bounding box, not from the actual path.
 
 .SH DESCRIPTION
 
@@ -11,6 +11,12 @@
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  nocurrentpoint(3ps)
+.B  stackoverflow(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  flattenpath(3ps)
+.B  clippath(3ps)
+.B  charpath(3ps)
+.B  setbbox(3ps)
+

@@ -6,7 +6,7 @@
 - currenthalftonephase x y DPS
 
 .SH DESCRIPTION
- returns the current values of the halftone phase parameters in  the graphics state. If sethalftonephase has not been executed,  zero is returned for both values. 
+returns the current values of the halftone phase parameters in  the graphics state. If sethalftonephase has not been executed,  zero is returned for both values. 
 
 .SH EXAMPLE
 (NONE)

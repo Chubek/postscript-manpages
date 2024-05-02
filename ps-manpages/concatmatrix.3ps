@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+matrix
 
 .SH DESCRIPTION
-
+rotate scale setmatrix translate 
 
 .SH EXAMPLE
 (NONE)

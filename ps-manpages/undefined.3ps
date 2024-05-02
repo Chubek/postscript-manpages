@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+undefinedresult
 
 .SH DESCRIPTION
 
@@ -13,4 +13,6 @@
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  image(3ps)
+.B  imagemask(3ps)
+

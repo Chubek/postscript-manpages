@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+ceiling
 
 .SH DESCRIPTION
-
+floor round truncate 
 
 .SH EXAMPLE
 (NONE)

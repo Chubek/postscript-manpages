@@ -6,12 +6,13 @@
 - lock lock DPS
 
 .SH DESCRIPTION
- creates a new lock object, unequal to any lock object already in  existence, and pushes it on the operand stack. The state of the  lock is initially free . Since a lock is a composite object, creating one consumes VM. The  lock\#39;s value is allocated in local or global VM according to  the current VM allocation mode . 
+creates a new lock object, unequal to any lock object already in  existence, and pushes it on the operand stack. The state of the  lock is initially free . Since a lock is a composite object, creating one consumes VM. The  lock\#39;s value is allocated in local or global VM according to  the current VM allocation mode . 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 .B  stackoverflow(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
 .B  monitor(3ps)

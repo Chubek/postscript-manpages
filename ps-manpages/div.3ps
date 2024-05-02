@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-, 
+mul
 
 .SH DESCRIPTION
-
+sub idiv mod 
 
 .SH EXAMPLE
 (NONE)

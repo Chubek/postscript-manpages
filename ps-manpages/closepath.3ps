@@ -6,7 +6,7 @@
 - closepath -
 
 .SH DESCRIPTION
- closes the current subpath by appending a straight line segment  connecting the current point to the subpath\#39;s starting  point-generally, the point most recently specified by closepath terminates the current subpath. Appending another  segment to the current path will begin a new subpath, even if it  is drawn from the endpoint reached by the closepath. 
+closes the current subpath by appending a straight line segment  connecting the current point to the subpath\#39;s starting  point-generally, the point most recently specified by moveto . If the current subpath is  already closed or the current path is empty, closepath does not  do anything closepath terminates the current subpath. Appending another  segment to the current path will begin a new subpath, even if it  is drawn from the endpoint reached by the closepath. 
 
 .SH EXAMPLE
 (NONE)

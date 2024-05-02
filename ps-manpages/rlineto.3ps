@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+moveto
 
 .SH DESCRIPTION
-
+arc curveto closepath 
 
 .SH EXAMPLE
 (NONE)

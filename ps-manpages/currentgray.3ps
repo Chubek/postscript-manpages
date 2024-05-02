@@ -6,7 +6,7 @@
 - currentgray num
 
 .SH DESCRIPTION
- returns the gray value of the current color parameter in the  graphics state. If the current color space is DeviceGray,  currentgray returns the color value most recently specified to  setgray or setcolor. If the current color space is DeviceRGB or  DeviceCMYK, currentgray converts the current color to a gray  value. For any other color space, currentgray returns 0.0. 
+returns the gray value of the current color parameter in the  graphics state. If the current color space is DeviceGray,  currentgray returns the color value most recently specified to  setgray or setcolor. If the current color space is DeviceRGB or  DeviceCMYK, currentgray converts the current color to a gray  value. For any other color space, currentgray returns 0.0. 
 
 .SH EXAMPLE
 (NONE)

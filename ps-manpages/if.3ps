@@ -6,17 +6,15 @@
 bool proc if -
 
 .SH DESCRIPTION
- removes both operands from the stack, then executes proc if bool  is true. The if operator pushes no results of its own on the  operand stack, but the proc may do so. 
+removes both operands from the stack, then executes proc if bool  is true. The if operator pushes no results of its own on the  operand stack, but the proc may do so. 
 
 .SH EXAMPLE
 .RI 
-
-
- 
-
 3 4 lt /{\n\n    
 
- 
+(3 is less than 4)} if -&gt; (3 is less than 4)
+
+
 .RE 
 
 

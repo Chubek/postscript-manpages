@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+cshow
 
 .SH DESCRIPTION
-
+kshow widthshow xshow xyshow yshow 
 
 .SH EXAMPLE
 (NONE)

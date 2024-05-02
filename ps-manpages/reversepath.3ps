@@ -6,7 +6,7 @@
 - reversepath
 
 .SH DESCRIPTION
- - replaces the current path with an equivalent one whose segments  are defined in the reverse order. Precisely, reversepath reverses  the directions and order of segments within each subpath of the  current path. However, it does not alter the order of the  subpaths in the path with respect to each other. 
+- replaces the current path with an equivalent one whose segments  are defined in the reverse order. Precisely, reversepath reverses  the directions and order of segments within each subpath of the  current path. However, it does not alter the order of the  subpaths in the path with respect to each other. 
 
 .SH EXAMPLE
 (NONE)

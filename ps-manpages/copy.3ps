@@ -6,43 +6,37 @@
 any1 ... anyn n copy any1 ... anyn any1 ... anyn
 
 .SH DESCRIPTION
- array1 array2 copy subarray2 dict1 dict2 copy dict2 string1 string2 copy substring2 packedarray1 array2 copy subarray2 gstate1 gstate2 copy gstate2 performs two entirely different functions, depending on the type  of the topmost operand. In the first instance, where the top element on the operand stack  is a non-negative integer n, copy pops n from the stack and  duplicates the top n elements on the operand stack as shown  above. This form of copy operates only on the objects themselves,  not on the values of composite objects. 
+array1 array2 copy subarray2 dict1 dict2 copy dict2 string1 string2 copy substring2 packedarray1 array2 copy subarray2 gstate1 gstate2 copy gstate2 performs two entirely different functions, depending on the type  of the topmost operand. In the first instance, where the top element on the operand stack  is a non-negative integer n, copy pops n from the stack and  duplicates the top n elements on the operand stack as shown  above. This form of copy operates only on the objects themselves,  not on the values of composite objects. 
 
 .SH EXAMPLE
 .RI 
-
-
 1 2 3 2 copy -&gt; 1 2 3 2 3
 
 1 2 3 0 copy -&gt; 1 2 3
 
- 
-
 In the other instances, copy copies all the elements of the first\n      composite object into the second. The composite object operands\n      must be of the same type, except that a packed array can be\n      copied into an array. This form of copy copies the value of a\n      composite object. This is quite different from 
 
- 
+dup
+
+ and other operators that copy\n      only the objects themselves . However, copy performs only one\n      level of copying. It does not apply recursively to elements that\n      are themselves composite objects; instead, the values of those\n      elements become shared.
 
 In the case of arrays or strings, the length of the second object\n      must be at least as great as the first; copy returns the initial\n      subarray or substring of the second operand into which the\n      elements were copied. Any remaining elements of array2 or string2\n      are unaffected. copy cannot copy into packed arrays, because they\n      are read-only, but it can copy packed arrays into ordinary\n      arrays.
 
- 
-
 In the case of dictionaries, Level 1 implementations require that\n      dict2 have a length of zero and a maxlength at least as great as\n      the length of dict1. Level 2 implementations do not impose this\n      restriction, since dictionaries can expand when necessary.
-
- 
 
 The attributes (literal or executable and access) of the result\n      are normally the same as those of the second operand. However, in\n      Level 1 implementations, the access attribute of dict2 is copied\n      from that of dict1.
 
- 
-
 If the value of the destination object is in global VM and any of\n      the elements copied from the source object are composite objects\n      whose values are in local VM, an 
 
- 
+invalidaccess
+
+ error occurs\n      .
 
 /a1 [1 2 3] def
 
 a1 dup length array copy -&gt; [1 2 3]
 
- 
+
 .RE 
 
 

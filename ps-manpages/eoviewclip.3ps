@@ -6,7 +6,7 @@
 - eoviewclip LEVEL 2
 
 .SH DESCRIPTION
- is similar to 
+is similar to viewclip ,  except that it uses the even-odd rule to determine the inside of  the current path. 
 
 .SH EXAMPLE
 (NONE)

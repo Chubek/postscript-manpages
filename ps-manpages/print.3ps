@@ -6,7 +6,7 @@
 string print
 
 .SH DESCRIPTION
- - writes the characters of string to the standard output file.  The print operator provides the simplest means to send text to an  application or an interactive user. Note that print is a file  operator that has nothing to do with painting character shapes on  the current page (see 
+- writes the characters of string to the standard output file.  The print operator provides the simplest means to send text to an  application or an interactive user. Note that print is a file  operator that has nothing to do with painting character shapes on  the current page (see show ) or  with sending the current page to a raster output device (see showpage ). 
 
 .SH EXAMPLE
 (NONE)
@@ -19,5 +19,7 @@ string print
 .SH SEE ALSO
 .B  write(3ps)
 .B  flush(3ps)
+.B  =(3ps)
+.B  ==(3ps)
 .B  printobject(3ps)
 

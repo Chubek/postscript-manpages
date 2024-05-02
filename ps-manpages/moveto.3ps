@@ -3,14 +3,18 @@
 
 
 .SH POSTFIX SIGNATURE
-
+. If the current subpath is\n      already closed or the current path is empty, closepath does not\n      do anything
 
 .SH DESCRIPTION
-
+closepath terminates the current subpath. Appending another  segment to the current path will begin a new subpath, even if it  is drawn from the endpoint reached by the closepath. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  limitcheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  newpath(3ps)
+.B  moveto(3ps)
+.B  lineto(3ps)
+

@@ -6,7 +6,7 @@
 - shareddict dict LEVEL 2
 
 .SH DESCRIPTION
- is the same dictionary as The name shareddict is defined for compatibility with existing  Display PostScript applications. 
+is the same dictionary as globaldict . The name shareddict is defined for compatibility with existing  Display PostScript applications. 
 
 .SH EXAMPLE
 (NONE)

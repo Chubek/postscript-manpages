@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-after it\n      has finished using the current path. Any subsequent path\n      construction operators will append to the current path unless\n      newpath is executed explicitly. This can cause unexpected\n      behavior.
+, clip does not implicitly\n      perform a 
 
 .SH DESCRIPTION
- 
+newpath after it  has finished using the current path. Any subsequent path  construction operators will append to the current path unless  newpath is executed explicitly. This can cause unexpected  behavior. 
 
 .SH EXAMPLE
 (NONE)

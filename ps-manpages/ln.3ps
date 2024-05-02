@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+log
 
 .SH DESCRIPTION
-
+mul 
 
 .SH EXAMPLE
 (NONE)

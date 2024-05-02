@@ -3,14 +3,21 @@
 
 
 .SH POSTFIX SIGNATURE
-
+store
 
 .SH DESCRIPTION
-
+, and where . 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  dictstackoverflow(3ps)
+.B  invalidaccess(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  end(3ps)
+.B  countdictstack(3ps)
+.B  dictstack(3ps)
+

@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-context.
+. This never occurs during\n      execution of ordinary user programs, because they are enclosed by\n      a 
 
 .SH DESCRIPTION
- 
+stopped context. 
 
 .SH EXAMPLE
 (NONE)

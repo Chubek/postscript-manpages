@@ -6,7 +6,7 @@
 x y width height rectviewclip
 
 .SH DESCRIPTION
- - numarray rectviewclip - numstring rectviewclip - LEVEL 2 replaces the current view clip with a rectangular path the  operands describe. In the first form, the operands are four  numbers that describe a single rectangle. In the other two forms,  the operand is an array or an encoded number string that  describes an arbitrary number of rectangles. After computing the  new view clipping path, rectviewclip resets the current path to  empty, as if by newpath. Except for the manner in which the path is defined, rectviewclip  behaves the same as viewclip. Note that if the second or third form is used to specify multiple  rectangles, the rectangles are treated together as a single path  and used for a single   
+- numarray rectviewclip - numstring rectviewclip - LEVEL 2 replaces the current view clip with a rectangular path the  operands describe. In the first form, the operands are four  numbers that describe a single rectangle. In the other two forms,  the operand is an array or an encoded number string that  describes an arbitrary number of rectangles. After computing the  new view clipping path, rectviewclip resets the current path to  empty, as if by newpath. Except for the manner in which the path is defined, rectviewclip  behaves the same as viewclip. Note that if the second or third form is used to specify multiple  rectangles, the rectangles are treated together as a single path  and used for a single   viewclip operation. The  &quot;inside&quot; of this combined path is the union of all the  rectangular subpaths, because the paths are all drawn in the same  direction and the nonzero winding number rule is used. 
 
 .SH EXAMPLE
 (NONE)

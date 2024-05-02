@@ -6,15 +6,13 @@
 array aload array0 ... arrayn-1 array
 
 .SH DESCRIPTION
- packedarray aload packedarray0 ... packedarrayn-1 packedarray successively pushes all n elements of array or packedarray on the  operand stack (where n is the length of the operand), and finally  pushes the operand itself. 
+packedarray aload packedarray0 ... packedarrayn-1 packedarray successively pushes all n elements of array or packedarray on the  operand stack (where n is the length of the operand), and finally  pushes the operand itself. 
 
 .SH EXAMPLE
 .RI 
-
-
 [23 (ab) -6] aload 23 (ab) -6 [23 (ab) -6]
 
- 
+
 .RE 
 
 

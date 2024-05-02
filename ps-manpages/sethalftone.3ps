@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+currentcolorscreen returns 60, 0, and the halftone dictionary,\n        repeated four times.\n    
 
 .SH DESCRIPTION
 
@@ -11,6 +11,10 @@
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  stackoverflow(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  setcolorscreen(3ps)
+.B  setscreen(3ps)
+.B  sethalftone(3ps)
+

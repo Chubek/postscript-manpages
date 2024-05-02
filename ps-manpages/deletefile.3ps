@@ -6,7 +6,7 @@
 filename deletefile - LEVEL 2
 
 .SH DESCRIPTION
- removes the specified file from its storage device. If no such  file exists, an occurs. 
+removes the specified file from its storage device. If no such  file exists, an undefinedfilename error occurs. If the device does not  allow this operation, an invalidfileaccess error occurs. If an environment dependent  error is detected, an ioerror occurs. 
 
 .SH EXAMPLE
 (NONE)

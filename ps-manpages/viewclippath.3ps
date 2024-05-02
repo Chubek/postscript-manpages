@@ -3,14 +3,18 @@
 
 
 .SH POSTFIX SIGNATURE
-
+).
 
 .SH DESCRIPTION
-
+There are few situations in which a PostScript language program  should execute initclip explicitly. A page description that  executes initclip usually produces incorrect results if it is  embedded within another, composite page. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  clip(3ps)
+.B  eoclip(3ps)
+.B  clippath(3ps)
+.B  initgraphics(3ps)
+

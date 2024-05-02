@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-operating on the Font\n      category.
+.
 
 .SH DESCRIPTION
- 
+definefont is actually a special case of defineresource operating on the Font  category. 
 
 .SH EXAMPLE
 (NONE)
@@ -24,5 +24,7 @@ operating on the Font\n      category.
 .B  scalefont(3ps)
 .B  setfont(3ps)
 .B  defineresource(3ps)
+.B  FontDirectory(3ps)
+.B  GlobalFontDirectory(3ps)
 .B  setglobal(3ps)
 

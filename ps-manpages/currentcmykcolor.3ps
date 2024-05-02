@@ -6,7 +6,7 @@
 - currentcmykcolor cyan magenta yellow\n      black LEVEL 2
 
 .SH DESCRIPTION
- returns the current color in the graphics state according to the  cyan-magenta-yellow-black color space. If the current color space  is DeviceCMYK, currentcmykcolor returns the color values most  recently specified by setcmykcolor or setcolor. If the current  color space is DeviceRGB or DeviceGray, currentcmykcolor converts  the current color to CMYK. For any other color space,  currentcmykcolor returns 0.0 0.0 0.0 1.0. 
+returns the current color in the graphics state according to the  cyan-magenta-yellow-black color space. If the current color space  is DeviceCMYK, currentcmykcolor returns the color values most  recently specified by setcmykcolor or setcolor. If the current  color space is DeviceRGB or DeviceGray, currentcmykcolor converts  the current color to CMYK. For any other color space,  currentcmykcolor returns 0.0 0.0 0.0 1.0. 
 
 .SH EXAMPLE
 (NONE)

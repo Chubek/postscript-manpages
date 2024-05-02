@@ -6,19 +6,15 @@
 segments where arcs were\n      specified originally.
 
 .SH DESCRIPTION
- 
+
 
 .SH EXAMPLE
 .RI 
-
-
 newpath 0 0 moveto 0 0 1 0 45 arc closepath
-
- 
 
 This constructs a 1-unit radius, 45-degree &quot;pie\n      slice.&quot;
 
- 
+
 .RE 
 
 
@@ -31,4 +27,5 @@ This constructs a 1-unit radius, 45-degree &quot;pie\n      slice.&quot;
 .B  arcn(3ps)
 .B  arct(3ps)
 .B  arcto(3ps)
+.B  curveto(3ps)
 

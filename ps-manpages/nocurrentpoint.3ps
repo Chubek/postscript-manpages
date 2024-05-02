@@ -3,14 +3,35 @@
 
 
 .SH POSTFIX SIGNATURE
-,\n      
+.
 
 .SH DESCRIPTION
-
+The center of the arc is located within the inner angle between  the tangent lines. It is the only point located at distance r in  a direction perpendicular to both lines. The arc begins at the  first tangent point (xt1, yt1) on the first tangent line, passes  between its center and the point (x1, y1), and ends at the second  tangent point (xt2, yt2) on the second tangent line. Before constructing the arc, arct adds a straight line segment  from the current point (x0, y0) to (xt1, yt1), unless those  points are the same. In any event, (xt2, yt2) becomes the new  current point. The curve produced is circular in user space. If user space is  scaled non-uniformly (i.e., differently in x and y) arct will  produce elliptical curves in device space. If the two tangent lines are collinear, arct merely appends a  straight line segment from (x0, y0) to (x1, y1), considering the  arc to be part of a degenerate circle with radius 0 at that  point. 
 
 .SH EXAMPLE
-(NONE)
+.RI 
+newpath 0 0 moveto
+
+0 4 4 4 1 arct
+
+4 4 lineto
+
+This constructs a 4-unit wide, 4-unit high right angle with a\n      1-unit radius &quot;rounded corner.&quot;
+
+
+.RE 
+
+
 .SH ERRORS
-(NONE)
+.B  limitcheck(3ps)
+.B  nocurrentpoint(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+.B  undefinedresult(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  arc(3ps)
+.B  arcn(3ps)
+.B  arcto(3ps)
+.B  curveto(3ps)
+

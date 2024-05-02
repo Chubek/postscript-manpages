@@ -6,7 +6,7 @@
 matrix currentmatrix matrix
 
 .SH DESCRIPTION
- replaces the value of matrix with the value of the current  transformation matrix (CTM) in the graphics state, and pushes the  modified matrix back on the operand stack . 
+replaces the value of matrix with the value of the current  transformation matrix (CTM) in the graphics state, and pushes the  modified matrix back on the operand stack . 
 
 .SH EXAMPLE
 (NONE)

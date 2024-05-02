@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+rotate
 
 .SH DESCRIPTION
-
+scale translate 
 
 .SH EXAMPLE
 (NONE)

@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+stroke
 
 .SH DESCRIPTION
-
+currentlinecap 
 
 .SH EXAMPLE
 (NONE)

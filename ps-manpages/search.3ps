@@ -6,12 +6,10 @@
 operator.
 
 .SH DESCRIPTION
- 
+
 
 .SH EXAMPLE
 .RI 
-
-
 (abbc) (ab) anchorsearch (bc) (ab) true
 
 (abbc) (bb) anchorsearch (abbc) false
@@ -20,7 +18,7 @@ operator.
 
 (abbc) (B) anchorsearch (abbc) false
 
- 
+
 .RE 
 
 
@@ -31,5 +29,6 @@ operator.
 .B  typecheck(3ps)
 
 .SH SEE ALSO
+.B  search(3ps)
 .B  token(3ps)
 

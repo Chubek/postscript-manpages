@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+.
 
 .SH DESCRIPTION
 
@@ -11,6 +11,9 @@
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  stackoverflow(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  srand(3ps)
+.B  rrand(3ps)
+

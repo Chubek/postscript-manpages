@@ -6,7 +6,7 @@
 - countexecstack int
 
 .SH DESCRIPTION
- counts the number of objects on the execution stack and pushes  this count on the operand stack. 
+counts the number of objects on the execution stack and pushes  this count on the operand stack. 
 
 .SH EXAMPLE
 (NONE)

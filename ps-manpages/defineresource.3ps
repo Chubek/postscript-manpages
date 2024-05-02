@@ -6,7 +6,7 @@
 operating on the Font\n      category.
 
 .SH DESCRIPTION
- 
+
 
 .SH EXAMPLE
 (NONE)
@@ -23,5 +23,8 @@ operating on the Font\n      category.
 .B  makefont(3ps)
 .B  scalefont(3ps)
 .B  setfont(3ps)
+.B  defineresource(3ps)
+.B  FontDirectory(3ps)
+.B  GlobalFontDirectory(3ps)
 .B  setglobal(3ps)
 

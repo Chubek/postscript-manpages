@@ -6,7 +6,7 @@
 - languagelevel int LEVEL 2
 
 .SH DESCRIPTION
- is an integer designating the PostScript language level supported  by the PostScript interpreter. If the value of languagelevel is  2, the PostScript interpreter supports all PostScript Level 2  language features. If the value of languagelevel is 1 or if languagelevel is not  defined in   
+is an integer designating the PostScript language level supported  by the PostScript interpreter. If the value of languagelevel is  2, the PostScript interpreter supports all PostScript Level 2  language features. If the value of languagelevel is 1 or if languagelevel is not  defined in   systemdict , the  PostScript interpreter does not support all PostScript Level 2  language features. 
 
 .SH EXAMPLE
 (NONE)

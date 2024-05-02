@@ -6,7 +6,7 @@
 was used,\n      currentcolortransfer returns the single transfer function,\n      repeated four times.
 
 .SH DESCRIPTION
- 
+
 
 .SH EXAMPLE
 (NONE)
@@ -15,4 +15,5 @@ was used,\n      currentcolortransfer returns the single transfer function,\n   
 
 .SH SEE ALSO
 .B  setcolortransfer(3ps)
+.B  settransfer(3ps)
 

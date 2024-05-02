@@ -6,7 +6,7 @@
 any1 ... anyn pstack any1 ... anyn
 
 .SH DESCRIPTION
- writes text representations of every object on the stack to the  standard output file, but leaves the stack unchanged. pstack  applies the 
+writes text representations of every object on the stack to the  standard output file, but leaves the stack unchanged. pstack  applies the == operator to  each element of the stack, starting with the topmost element. See  the == operator for a  description of its effects. 
 
 .SH EXAMPLE
 (NONE)
@@ -14,4 +14,6 @@ any1 ... anyn pstack any1 ... anyn
 (NONE)
 .SH SEE ALSO
 .B  stack(3ps)
+.B  =(3ps)
+.B  ==(3ps)
 

@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-or 
+for
 
 .SH DESCRIPTION
- 
+loop resourceforall exit pops the execution stack down to the level of that operator.  The interpreter then resumes execution at the next object in  normal sequence after that operator. exit does not affect the operand or dictionary stacks. Any  objects pushed on those stacks during execution of the looping  context remain after the context is exited. If exit would escape from the context of a run or stopped operator, it executes the invalidexit error (still in  the context of the run or stopped ). If there is no  enclosing looping context, the interpreter prints an error  message and executes the built-in operator quit . This never occurs during  execution of ordinary user programs, because they are enclosed by  a stopped context. 
 
 .SH EXAMPLE
 (NONE)

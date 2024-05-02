@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-
+readhexstring
 
 .SH DESCRIPTION
-
+readline readstring 
 
 .SH EXAMPLE
 (NONE)

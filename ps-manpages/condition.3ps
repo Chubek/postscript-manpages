@@ -6,12 +6,13 @@
 - condition condition DPS
 
 .SH DESCRIPTION
- creates a new condition object, unequal to any condition object  already in existence, and pushes it on the operand stack. The  condition initially has no contexts waiting on it . Since a  condition is a composite object, creating one consumes VM. The  condition\#39;s value is allocated in local or global VM  according to the current VM allocation mode. 
+creates a new condition object, unequal to any condition object  already in existence, and pushes it on the operand stack. The  condition initially has no contexts waiting on it . Since a  condition is a composite object, creating one consumes VM. The  condition\#39;s value is allocated in local or global VM  according to the current VM allocation mode. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 .B  stackoverflow(3ps)
+.B  VMerror(3ps)
 
 .SH SEE ALSO
 .B  wait(3ps)

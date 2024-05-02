@@ -3,14 +3,32 @@
 
 
 .SH POSTFIX SIGNATURE
-
+. font must be a valid font dictionary\n      previously returned by 
 
 .SH DESCRIPTION
-
+findfont scalefont , or makefont . 
 
 .SH EXAMPLE
-(NONE)
+.RI 
+/Helvetica findfont % Obtain prototype
+
+Helvetica font 10 scalefont % Scale it to 10-unit size
+
+setfont % Establish it as current font
+
+
+.RE 
+
+
 .SH ERRORS
-(NONE)
+.B  invalidfont(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  currentfont(3ps)
+.B  scalefont(3ps)
+.B  makefont(3ps)
+.B  findfont(3ps)
+.B  selectfont(3ps)
+

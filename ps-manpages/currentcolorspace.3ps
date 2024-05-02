@@ -6,7 +6,7 @@
 - currentcolorspace array LEVEL 2
 
 .SH DESCRIPTION
- returns an array containing the identifying key and parameters of  the color space in the graphics state. currentcolorspace always  returns an array, even if the color space has no parameters and  was selected by presenting just a name to setcolorspace. 
+returns an array containing the identifying key and parameters of  the color space in the graphics state. currentcolorspace always  returns an array, even if the color space has no parameters and  was selected by presenting just a name to setcolorspace. 
 
 .SH EXAMPLE
 (NONE)

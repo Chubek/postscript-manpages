@@ -6,7 +6,7 @@
 - currentdict dict
 
 .SH DESCRIPTION
- pushes the current dictionary (the dictionary on top of the  dictionary stack) on the operand stack. currentdict does not pop  the dictionary stack; it just pushes a duplicate of its top  element on the operand stack. 
+pushes the current dictionary (the dictionary on top of the  dictionary stack) on the operand stack. currentdict does not pop  the dictionary stack; it just pushes a duplicate of its top  element on the operand stack. 
 
 .SH EXAMPLE
 (NONE)

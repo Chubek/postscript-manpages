@@ -3,14 +3,18 @@
 
 
 .SH POSTFIX SIGNATURE
-
+stackunderflow
 
 .SH DESCRIPTION
-
+typecheck 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  read(3ps)
+.B  readhexstring(3ps)
+.B  readline(3ps)
+.B  readstring(3ps)
+

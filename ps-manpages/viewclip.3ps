@@ -3,7 +3,7 @@
 
 
 .SH POSTFIX SIGNATURE
-
+,\n      except that it uses the even-odd rule to determine the inside of\n      the current path.
 
 .SH DESCRIPTION
 
@@ -11,6 +11,8 @@
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  limitcheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  viewclip(3ps)
+

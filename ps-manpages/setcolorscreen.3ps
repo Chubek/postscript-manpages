@@ -3,14 +3,18 @@
 
 
 .SH POSTFIX SIGNATURE
-
+currentcolorscreen returns all 12 current halftone screen\n        parameters in the graphics state.
 
 .SH DESCRIPTION
-
+If the current screen was specified by setscreen currentcolorscreen returns the three screen parameters repeated  four times. If the current screen was specified by sethalftone currentcolorscreen returns 60, 0, and the halftone dictionary,  repeated four times.  
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  stackoverflow(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  setcolorscreen(3ps)
+.B  setscreen(3ps)
+.B  sethalftone(3ps)
+

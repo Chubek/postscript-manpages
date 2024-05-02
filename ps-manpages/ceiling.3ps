@@ -6,19 +6,17 @@
 num1 ceiling num2
 
 .SH DESCRIPTION
- returns the least integer value greater than or equal to num1. The type of the result is the same as the type of the operand. 
+returns the least integer value greater than or equal to num1. The type of the result is the same as the type of the operand. 
 
 .SH EXAMPLE
 .RI 
-
-
 3.2 ceiling -&gt; 4.0
 
 -4.8 ceiling -&gt; -4.0
 
 99 ceiling -&gt; 99
 
- 
+
 .RE 
 
 

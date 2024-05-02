@@ -6,7 +6,7 @@
 - currenttransfer proc
 
 .SH DESCRIPTION
- returns the current transfer function in the graphics state,  assuming that it was established by 
+returns the current transfer function in the graphics state,  assuming that it was established by settransfer . If setcolortransfer was  executed, currenttransfer returns the gray transfer function. 
 
 .SH EXAMPLE
 (NONE)

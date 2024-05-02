@@ -6,7 +6,7 @@
 - currentflat num
 
 .SH DESCRIPTION
- returns the current value of the flatness parameter in the  graphics state. 
+returns the current value of the flatness parameter in the  graphics state. 
 
 .SH EXAMPLE
 (NONE)

@@ -6,7 +6,7 @@
 file resetfile - LEVEL 2
 
 .SH DESCRIPTION
- discards buffered characters belonging to a file object. For an  input file, resetfile discards any characters that have been  received from the source, but not yet consumed. For an output  file, it discards any characters that have been written to the  file, but not yet delivered to their destination. resetfile may have other side effects that depend on the  properties of the underlying file. For example, it may restart  communication via a channel that was blocked waiting for buffer  space to become available. resetfile never waits for characters  to be received or transmitted. 
+discards buffered characters belonging to a file object. For an  input file, resetfile discards any characters that have been  received from the source, but not yet consumed. For an output  file, it discards any characters that have been written to the  file, but not yet delivered to their destination. resetfile may have other side effects that depend on the  properties of the underlying file. For example, it may restart  communication via a channel that was blocked waiting for buffer  space to become available. resetfile never waits for characters  to be received or transmitted. 
 
 .SH EXAMPLE
 (NONE)

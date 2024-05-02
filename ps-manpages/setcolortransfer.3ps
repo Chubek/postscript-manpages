@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-was used,\n      currentcolortransfer returns the single transfer function,\n      repeated four times.
+,\n      currentcolortransfer returns those four operands.
 
 .SH DESCRIPTION
- 
+If settransfer was used,  currentcolortransfer returns the single transfer function,  repeated four times. 
 
 .SH EXAMPLE
 (NONE)
@@ -14,5 +14,6 @@ was used,\n      currentcolortransfer returns the single transfer function,\n   
 .B  stackoverflow(3ps)
 
 .SH SEE ALSO
+.B  setcolortransfer(3ps)
 .B  settransfer(3ps)
 

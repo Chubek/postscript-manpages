@@ -3,14 +3,17 @@
 
 
 .SH POSTFIX SIGNATURE
-, 
+stackunderflow
 
 .SH DESCRIPTION
-
+typecheck 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  astore(3ps)
+.B  get(3ps)
+.B  getinterval(3ps)
+

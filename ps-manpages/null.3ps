@@ -6,7 +6,7 @@
 - null null
 
 .SH DESCRIPTION
- pushes a literal null object on the operand stack. null is not an  operator; it is a name in 
+pushes a literal null object on the operand stack. null is not an  operator; it is a name in systemdict associated with the null object. 
 
 .SH EXAMPLE
 (NONE)

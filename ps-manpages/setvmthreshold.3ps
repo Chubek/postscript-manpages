@@ -6,7 +6,7 @@
 int setvmthreshold - LEVEL 2
 
 .SH DESCRIPTION
- sets the allocation threshold used to trigger garbage  collections. If the specified value is less than the  implementation-dependent minimum value, the threshold is set to  that minimum value. If the specified value is greater than the  implementation-dependent maximum value, the threshold is set to  that maximum value. If the value specified is -1, then the  threshold is set to the implementationdependent default value.  All other negative values result in a In a Display PostScript system, which supports multiple contexts,  this parameter is maintained seperately for each context. The  parameter specified by setvmthreshold is the same as the  VMThreshold user parameter set by 
+sets the allocation threshold used to trigger garbage  collections. If the specified value is less than the  implementation-dependent minimum value, the threshold is set to  that minimum value. If the specified value is greater than the  implementation-dependent maximum value, the threshold is set to  that maximum value. If the value specified is -1, then the  threshold is set to the implementationdependent default value.  All other negative values result in a rangecheck error.  Modifications to the allocation threshhold parameter obey save and restore . In a Display PostScript system, which supports multiple contexts,  this parameter is maintained seperately for each context. The  parameter specified by setvmthreshold is the same as the  VMThreshold user parameter set by setuserparams . 
 
 .SH EXAMPLE
 (NONE)

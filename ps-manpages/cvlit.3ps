@@ -6,7 +6,7 @@
 any cvlit any
 
 .SH DESCRIPTION
- (convert to literal) makes the object on the top of the operand  stack have the literal instead of executable attribute. 
+(convert to literal) makes the object on the top of the operand  stack have the literal instead of executable attribute. 
 
 .SH EXAMPLE
 (NONE)

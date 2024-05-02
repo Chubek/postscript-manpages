@@ -3,14 +3,21 @@
 
 
 .SH POSTFIX SIGNATURE
-
+matrix identmatrix matrix
 
 .SH DESCRIPTION
-
+replaces the value of matrix with the value of the identity  matrix [1.0 0.0 0.0 1.0 0.0 0.0] and pushes this modified matrix back on the operand stack. The  identity matrix transforms any coordinate to itself. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  rangecheck(3ps)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  matrix(3ps)
+.B  currentmatrix(3ps)
+.B  defaultmatrix(3ps)
+.B  initmatrix(3ps)
+

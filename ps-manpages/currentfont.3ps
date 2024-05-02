@@ -6,7 +6,7 @@
 is restored.
 
 .SH DESCRIPTION
- cshow can be used to provide careful positioning of individual  characters while taking advantage of the composite font mapping  machinery of the interpreter. cshow is intended primarily for use  with composite fonts . However, it can also be used with a base  font. The mapping algorithm for a base font simply selects  consecutive characters from the string. 
+cshow can be used to provide careful positioning of individual  characters while taking advantage of the composite font mapping  machinery of the interpreter. cshow is intended primarily for use  with composite fonts . However, it can also be used with a base  font. The mapping algorithm for a base font simply selects  consecutive characters from the string. 
 
 .SH EXAMPLE
 (NONE)
@@ -21,6 +21,7 @@ is restored.
 .B  ashow(3ps)
 .B  awidthshow(3ps)
 .B  kshow(3ps)
+.B  show ,(3ps)
 .B  widthshow(3ps)
 .B  xshow(3ps)
 .B  xyshow(3ps)

@@ -3,14 +3,22 @@
 
 
 .SH POSTFIX SIGNATURE
-
+nocurrentpoint
 
 .SH DESCRIPTION
-
+stackunderflow typecheck 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-(NONE)
+.B  show(3ps)
+.B  awidthshow(3ps)
+.B  cshow(3ps)
+.B  kshow(3ps)
+.B  widthshow(3ps)
+.B  xshow(3ps)
+.B  xyshow(3ps)
+.B  yshow(3ps)
+

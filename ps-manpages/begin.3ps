@@ -6,7 +6,7 @@
 dict begin
 
 .SH DESCRIPTION
- - pushes dict on the dictionary stack, making it the current  dictionary and installing it as the first of the dictionaries  consulted during implicit name lookup and by 
+- pushes dict on the dictionary stack, making it the current  dictionary and installing it as the first of the dictionaries  consulted during implicit name lookup and by def load store , and where . 
 
 .SH EXAMPLE
 (NONE)

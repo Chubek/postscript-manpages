@@ -3,14 +3,18 @@
 
 
 .SH POSTFIX SIGNATURE
-
+; it does not apply to\n      normal communication with the PostScript interpreter.
 
 .SH DESCRIPTION
-
+echo is not defined in products that do not support  executive. 
 
 .SH EXAMPLE
 (NONE)
 .SH ERRORS
-(NONE)
+.B  stackunderflow(3ps)
+.B  typecheck(3ps)
+
 .SH SEE ALSO
-(NONE)
+.B  executive(3ps)
+.B  file(3ps)
+

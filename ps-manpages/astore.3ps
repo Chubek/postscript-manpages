@@ -3,10 +3,10 @@
 
 
 .SH POSTFIX SIGNATURE
-, 
+get
 
 .SH DESCRIPTION
-
+getinterval 
 
 .SH EXAMPLE
 (NONE)

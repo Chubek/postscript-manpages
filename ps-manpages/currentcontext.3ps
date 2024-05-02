@@ -6,7 +6,7 @@
 - currentcontext context DPS
 
 .SH DESCRIPTION
- returns an integer that identifies the current execution  context. 
+returns an integer that identifies the current execution  context. 
 
 .SH EXAMPLE
 (NONE)

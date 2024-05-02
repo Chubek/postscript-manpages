@@ -6,7 +6,7 @@
 any gcheck bool\n      LEVEL 2
 
 .SH DESCRIPTION
- returns true if the operand is simple or if it is composite and  its value resides in global VM. It returns false if the operand  is composite and its value resides in local VM. In other words,  gcheck returns true if one could legally store its operand as an  element of another object in global VM. 
+returns true if the operand is simple or if it is composite and  its value resides in global VM. It returns false if the operand  is composite and its value resides in local VM. In other words,  gcheck returns true if one could legally store its operand as an  element of another object in global VM. 
 
 .SH EXAMPLE
 (NONE)
