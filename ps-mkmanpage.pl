@@ -8,6 +8,7 @@ while (<$fhi>) {
 	chomp;
 	next if (/%\s*$/);
 	&parse_operator($1) if (/^([a-z]+)$/);
+	exit(42);
 }
 
 close($fhi);
@@ -144,20 +145,12 @@ sub parse_operator {
 
 	my @lines = split /^-\\n$/, $acc_text;
 
-	foreach my $line (@lines) {
-		next if ($line =~ /^-,\\n$/);
-		$line =~ s/-\\n\s*//g;
-		if ($line =~ /EXAMPLE:/) { $ref = \$example; next; }
-		if ($line =~ /SEE ALSO:/) { $ref = \$see_also; next; }
-		if ($line =~ /ERRORS:/) { $ref = \$errors; next; }
-		if ($signature eq "") { $signature .= $line; $ref = \$description; next; }
-
-		$$ref .= $line;
+	for (@lines) {
+		print;
 	}
 
 
 	&gen_manpage($op, $signature, $description, $example, $errors, $see_also);
-
 }
 
 
