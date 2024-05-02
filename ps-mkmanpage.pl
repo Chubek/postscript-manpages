@@ -130,27 +130,35 @@ sub parse_operator {
 	my $errors = "";
 	my $see_also = "";
 
-	my $mode = \$description;
+	my $mode = "SIGNATURE";
 
 	while (<$fhi>) {
 		next if /^\|br$/;
 		next if /^-\\n$/;
 		next if /^A.+$/;
+		next if /^-,$/;
 		if (/^-$op$/) { $engage = 1; }
 		elsif (/^\|hr$/ && $engage) { 
 			close($fhi); 
 			&gen_manpage($op, $signature, $description, $example, $errors, $see_also);
 			return;
 		}
-		elsif (/- (.+)$/) { $signature .= "\n$1"; }
-		elsif (/^-\\n\s+(.+)/) {
-			my $capture = $1;
-			if ($capture =~ /EXAMPLE:/) {  $mode = \$example; next; }
-			elsif ($capture =~ /SEE\s+ALSO:/) { $mode = \$see_also; next; }
-			elsif ($capture =~ /ERRORS:/) {  $mode = \$errors; next; }
-			else {	$$mode .= "\n$1"; }
+		elsif (/^-\s(.+)$/ && $engage && $mode eq "SIGNATURE") { $signature .= "\n$1"; $mode = "DESC"; next; }
+		elsif (/^-\\n\s+(.+)$/ && $engage && $mode eq "DESC") {
+			if ($1 =~ /([A-Z\s]+):/) { $mode = $1; next; }
+			else { $description .= "\n$1"; }
 		}
-		elsif (/^-([a-z]+)$/ && $engage) { $$mode .= "\n$1"; }
+		elsif (/^-\\n\s+(.+)$/ && $engage && $mode eq "EXAMPLE") {
+			if ($1 =~ /([A-Z\s]+):/) { $mode = $1; next; }
+			else { $example .= "\n$1"; }
+		}
+		elsif (/^-\\n\s+(.+)$/ && $engage && $mode eq "ERRORS") {
+			if ($1 =~ /([A-Z\s]+):/) { $mode = $1; next; }
+		}
+		elsif (/^-([a-z]+)$/ && $engage) {
+			if ($mode eq "ERRORS") { $errors .= "\n$1"; }
+			if ($mode eq "SEE ALSO") { $see_also .= "\n$1"; }
+		}
 	}
 }
 
