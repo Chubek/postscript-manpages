@@ -8,7 +8,6 @@ while (<$fhi>) {
 	chomp;
 	next if (/%\s*$/);
 	&parse_operator($1) if (/^([a-z]+)$/);
-	exit(42);
 }
 
 close($fhi);
@@ -124,13 +123,15 @@ sub parse_operator {
 
 	open (my $fhi, '<', "ps-manpages.hxpipe") or die "No such file: ps-manpages.hxpipe";
 
-	my $acc_text = "";
+	my @acc_text = "";
 
 	while (<$fhi>) { last if m/^-$op$/; };
 	while (<$fhi>) { 
+		chomp;
 		last if m/^\|hr$/;
-		next if m/^[^-]+/;
-		$acc_text .= $_;
+		next if m/^[^-]/;
+		push @acc_text, $2 if m/^-(\\n\s+)?(.+)$/;
+		next;
 	}
 
 	close($fhi);
@@ -143,12 +144,15 @@ sub parse_operator {
 
 	my $ref = \$signature;
 
-	my @lines = split /^-\\n$/, $acc_text;
+	for (@acc_text) {
+		next if m/.*\\n.*/;
+		if (/EXAMPLE:/) { $ref = \$example; next; }
+		if (/SEE ALSO:/) { $ref = \$see_also; next; }
+		if (/ERRORS:/) { $ref = \$errors; next; }
+		if ($signature eq "") { $signature .= $_; $ref = \$description; next; }
 
-	for (@lines) {
-		print;
+		$$ref .= "$_\n";
 	}
-
 
 	&gen_manpage($op, $signature, $description, $example, $errors, $see_also);
 }
