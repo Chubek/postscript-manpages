@@ -26,28 +26,29 @@ sub gen_manpage {
 	    $creds .= q(.\");
 	    $creds .= "\n";
 	    $creds .= q(.\" Copyright: (CC) Unlicense - 2024 Chubak Bidpaa);
-	    $creds .= "\n";
 	    return $creds;
 	};
 
 	my $gen_title = sub {
 		my $current_date = strftime("%Y-%m-%d", localtime);
-		return qq(.TH $name 1ps "$current_date\n" "" "PostScript Operators Manual");
+		return qq(.TH $name 1ps "$current_date" "" "PostScript Operators Manual");
 	};
 
 	my $gen_signature = sub {
 		my $signature_gen = "";
-		$signature_gen .= ".SH SIGNATURE\n";
+		$signature_gen .= ".SH STACK SIGNATURE\n";
 		$signature_gen .= ".B $signature\n";
-		$signature_gen .= "\n";
 		return $signature_gen;
 	};
 
 	my $gen_description = sub {
-		my $description_gen = $description;
-		$description_gen =~ s/\s+/ /g;
-		$description_gen =~ s/\\n/ .br /g;
-		$description_gen .= "\n";
+		my $description_pp = $description;
+		my $description_gen = "";
+		$description_pp =~ s/^\s//;
+		$description_pp =~ s/\s+/ /g;
+		$description_pp =~ s/\\n/ .br /g;
+		$description_gen .= ".SH DESCRIPTION\n";
+		$description_gen .= $description_pp;
 		return $description_gen;
 	};
 
@@ -59,7 +60,6 @@ sub gen_manpage {
 		$example_gen .= $example;
 		$example_gen .= "\n";
 		$example_gen .= ".RE\n";
-		$example_gen .= "\n";
 		return $example_gen;
 	};
 
@@ -73,7 +73,6 @@ sub gen_manpage {
 			$errors_gen .= "$err(3ps)\n";
 			$errors_gen .= "\n";
 		}
-		$errors_gen .= "\n";
 		return $errors_gen;
 	};
 
@@ -87,19 +86,18 @@ sub gen_manpage {
 			$see_also_gen .= "$ref(3ps)\n";
 			$see_also_gen .= "\n";
 		}
-		$see_also_gen .= "\n";
 		return $see_also_gen;
 	};
 
 	`mkdir -p ps-manpages`;
 	open (my $fho, '>', "ps-manpages/$name.3ps");
 
-	print $fho $gen_creds->();
-	print $fho $gen_title->();
-	print $fho $gen_signature->();
-	print $fho $gen_description->();
-	print $fho $gen_example->();
-	print $fho $gen_errors->();
+	print $fho $gen_creds->(), "\n";
+	print $fho $gen_title->(), "\n";
+	print $fho $gen_signature->(), "\n";
+	print $fho $gen_description->(), "\n";
+	print $fho $gen_example->(), "\n";
+	print $fho $gen_errors->(), "\n";
 	print $fho $gen_see_also->();
 
 	close($fho);
