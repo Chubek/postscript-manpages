@@ -123,43 +123,76 @@ sub parse_operator {
 
 	open (my $fhi, '<', "ps-manpages.hxpipe") || die "No such file: ps-manpages.hxpipe";
 
-	my $engage = 0;
 	my $signature = "";
 	my $description = "";
 	my $example = "";
 	my $errors = "";
 	my $see_also = "";
 
-	my $mode = "SIGNATURE";
 
 	while (<$fhi>) {
-		next if /^\|br$/;
-		next if /^-\\n$/;
-		next if /^A.+$/;
-		next if /^-,$/;
-		if (/^-$op$/) { $engage = 1; }
-		elsif (/^\|hr$/ && $engage) { 
-			close($fhi); 
-			&gen_manpage($op, $signature, $description, $example, $errors, $see_also);
-			return;
-		}
-		elsif (/^-\s(.+)$/ && $engage && $mode eq "SIGNATURE") { $signature .= "\n$1"; $mode = "DESC"; next; }
-		elsif (/^-\\n\s+(.+)$/ && $engage && $mode eq "DESC") {
-			if ($1 =~ /([A-Z\s]+):/) { $mode = $1; next; }
-			else { $description .= "\n$1"; }
-		}
-		elsif (/^-\\n\s+(.+)$/ && $engage && $mode eq "EXAMPLE") {
-			if ($1 =~ /([A-Z\s]+):/) { $mode = $1; next; }
-			else { $example .= "\n$1"; }
-		}
-		elsif (/^-\\n\s+(.+)$/ && $engage && $mode eq "ERRORS") {
-			if ($1 =~ /([A-Z\s]+):/) { $mode = $1; next; }
-		}
-		elsif (/^-([a-z]+)$/ && $engage) {
-			if ($mode eq "ERRORS") { $errors .= "\n$1"; }
-			if ($mode eq "SEE ALSO") { $see_also .= "\n$1"; }
-		}
+		next while ($_ !~ m/^-$op$/);
+
+		my $parse_op = sub { 
+
+			my $consume_signature = sub {
+				while (<$fhi>) {
+					if (/^-\s(.+)$/) { $signature .= "$1\n"; }
+					else { return; }
+				}
+			};
+
+			my $consume_description = sub {
+				while (<$fhi>) {
+					if (/^-\\n\s+(.+)$/) { $description .= "$1\n"; }
+					else { return; }
+				}
+			};
+
+			my $consume_example = sub {
+				while (<$fhi>) {
+					next while ($_ !~ m/^-\\n\s+EXAMPLE:$/);
+					while (<$fhi>) {
+						if (/^-\\n\s+(.+)/) { $example .= "$1\n"; }
+						else { return; }
+					}
+				}
+			};
+
+			my $consume_errors = sub {
+				while (<$fhi>) {
+					next while ($_ !~ m/^-\\n\s+ERRORS:$/);
+					while (<$fhi>) {
+						if (/^-([a-z]+)$/) { $errors .= "$1\n"; }
+						else { return; }
+					}
+				}
+			};
+
+			my $consume_see_also = sub {
+				while (<$fhi>) {
+					next while ($_ !~ m/^-\\n\s+SEE ALSO:$/);
+					while (<$fhi>) {
+						if (/^-([a-z]+)$/) { $see_also .= "$1\n"; }
+						else { return; }
+					}
+				}
+			};
+
+			$consume_signature->();
+			$consume_description->();
+			$consume_example->();
+			$consume_errors->();
+			$consume_see_also->();
+
+		};
+
+		$parse_op->();
+		&gen_manpage($op, $signature, $description, $example, $errors, $see_also);
+
 	}
+
+
 }
 
 
