@@ -3,81 +3,14 @@
 
 
 .SH POSTFIX SIGNATURE
-num1 abs num2
-num1 num2 add sum
-, 
-, 
-, 
-array aload array0 ... arrayn-1 array
-, 
-, 
-string seek anchorsearch
-operator.
-bool1 bool2 and bool3
-, 
-, 
-, 
-, 
 x y r ang1 ang2 arc -
-segments where arcs were\n      specified originally.
-, 
-, 
-, 
 
 .SH DESCRIPTION
- returns the absolute value of num1. The type of the result is the same as the type of num1 unless  num1 is the most negative integer, in which case the result is a  real. 
+ appends a counterclockwise arc of a circle to the current path,  possibly preceded by a straight line segment. The arc has (x, y)  as center, r as radius, ang1 the angle of a vector from (x, y) of  length r to the first endpoint of the arc, and ang2 the angle of  a vector from (x, y) of length r to the second endpoint of the  arc. If there is a current point, the arc operator includes a straight  line segment from the current point to the first endpoint of this  arc and then adds the arc into the current path. If the current  path is empty, the arc operator does not produce the initial  straight line segment. In any event, the second endpoint of the  arc becomes the new current point. Angles are measured in degrees counterclockwise from the positive  x-axis of the current user coordinate system. The curve produced  is circular in user space. If user space is scaled non-uniformly  (i.e., differently in x and y) arc will produce elliptical curves  in device space. The operators that produce arcs ( represent them internally as one or more Bezier cubic curves.  This is done with sufficient accuracy that a faithful rendition  of an arc is produced. However, a program that reads the  constructed path using pathforall will encounter 
 
 .SH EXAMPLE
 .RI 
 
-
-4.5 abs 4.5
-
--3 abs 3
-
-0 abs 0
-
- 
-
- 
-
-3 4 add 7
-
- 
-
-9.9 1.1 add 11.0
-
- 
-
-[23 (ab) -6] aload 23 (ab) -6 [23 (ab) -6]
-
- 
-
-(abbc) (ab) anchorsearch (bc) (ab) true
-
-(abbc) (bb) anchorsearch (abbc) false
-
-(abbc) (bc) anchorsearch (abbc) false
-
-(abbc) (B) anchorsearch (abbc) false
-
- 
-
-true true and true % a complete truth table
-
-true false and false
-
-false true and false
-
-false false and false
-
- 
-
-99 1 and 1
-
-52 7 and 4
-
- 
 
 newpath 0 0 moveto 0 0 1 0 45 arc closepath
 
@@ -95,29 +28,8 @@ This constructs a 1-unit radius, 45-degree &quot;pie\n      slice.&quot;
 .B  typecheck(3ps)
 
 .SH SEE ALSO
-.B  returns the sum of num1 and num2.(3ps)
-.B  If both operands are integers and the result is within integer\n      range, the result is an integer; otherwise, the result is a\n      real.(3ps)
-.B  packedarray aload packedarray0 ... packedarrayn-1 packedarray(3ps)
-.B  successively pushes all n elements of array or packedarray on the\n      operand stack (where n is the length of the operand), and finally\n      pushes the operand itself.(3ps)
-.B  post match true (if found)(3ps)
-.B  string false (if not found)(3ps)
-.B  determines if the string seek matches the initial substring of\n      string(3ps)
-.B  (that is, string is at least as long as seek and the\n      corresponding characters are equal).(3ps)
-.B  If it matches, anchorsearch splits string into two segments:\n      match, the portion of string that matches seek, and post, the\n      remainder of string; it then pushes the string objects post and\n      match and the boolean (3ps)
-.B  int1 int1 and int1(3ps)
-.B  If the operands are booleans, and returns their logical\n      conjunction. If the operands are integers, and returns the\n      bitwise and of their binary representations.(3ps)
-.B  appends a counterclockwise arc of a circle to the current path,\n      possibly preceded by a straight line segment. The arc has (x, y)\n      as center, r as radius, ang1 the angle of a vector from (x, y) of\n      length r to the first endpoint of the arc, and ang2 the angle of\n      a vector from (x, y) of length r to the second endpoint of the\n      arc.(3ps)
-.B  If there is a current point, the arc operator includes a straight\n      line segment from the current point to the first endpoint of this\n      arc and then adds the arc into the current path. If the current\n      path is empty, the arc operator does not produce the initial\n      straight line segment. In any event, the second endpoint of the\n      arc becomes the new current point.(3ps)
-.B  Angles are measured in degrees counterclockwise from the positive\n      x-axis of the current user coordinate system. The curve produced\n      is circular in user space. If user space is scaled non-uniformly\n      (i.e., differently in x and y) arc will produce elliptical curves\n      in device space.(3ps)
-.B  The operators that produce arcs ( (3ps)
 .B  arcn(3ps)
 .B  arct(3ps)
-.B  arcto(3ps)
-.B  represent them internally as one or more Bezier cubic curves.\n      This is done with sufficient accuracy that a faithful rendition\n      of an arc is produced. However, a program that reads the\n      constructed path using pathforall will encounter (3ps)
-.B  curveto(3ps)
-.B  arcn(3ps)
-.B  arct(3ps)
-.B  , (3ps)
 .B  arcto(3ps)
 .B  curveto(3ps)
 

@@ -3,53 +3,14 @@
 
 
 .SH POSTFIX SIGNATURE
-num1 abs num2
-num1 num2 add sum
-, 
-, 
-, 
-array aload array0 ... arrayn-1 array
-, 
 , 
 
 .SH DESCRIPTION
- returns the absolute value of num1. The type of the result is the same as the type of num1 unless  num1 is the most negative integer, in which case the result is a  real. 
+
 
 .SH EXAMPLE
-.RI 
-
-
-4.5 abs 4.5
-
--3 abs 3
-
-0 abs 0
-
- 
-
- 
-
-3 4 add 7
-
- 
-
-9.9 1.1 add 11.0
-
- 
-
-[23 (ab) -6] aload 23 (ab) -6 [23 (ab) -6]
-
- 
-.RE 
-
-
+(NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-.B  returns the sum of num1 and num2.(3ps)
-.B  If both operands are integers and the result is within integer\n      range, the result is an integer; otherwise, the result is a\n      real.(3ps)
-.B  packedarray aload packedarray0 ... packedarrayn-1 packedarray(3ps)
-.B  successively pushes all n elements of array or packedarray on the\n      operand stack (where n is the length of the operand), and finally\n      pushes the operand itself.(3ps)
-.B  get(3ps)
-.B  getinterval(3ps)
-
+(NONE)

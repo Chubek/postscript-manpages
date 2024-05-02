@@ -3,45 +3,14 @@
 
 
 .SH POSTFIX SIGNATURE
-num1 abs num2
-num1 num2 add sum
-, 
-, 
 , 
 
 .SH DESCRIPTION
- returns the absolute value of num1. The type of the result is the same as the type of num1 unless  num1 is the most negative integer, in which case the result is a  real. 
+
 
 .SH EXAMPLE
-.RI 
-
-
-4.5 abs 4.5
-
--3 abs 3
-
-0 abs 0
-
- 
-
- 
-
-3 4 add 7
-
- 
-
-9.9 1.1 add 11.0
-
- 
-.RE 
-
-
+(NONE)
 .SH ERRORS
 (NONE)
 .SH SEE ALSO
-.B  returns the sum of num1 and num2.(3ps)
-.B  If both operands are integers and the result is within integer\n      range, the result is an integer; otherwise, the result is a\n      real.(3ps)
-.B  sub(3ps)
-.B  idiv(3ps)
-.B  mod(3ps)
-
+(NONE)
