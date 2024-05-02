@@ -33,14 +33,20 @@ sub gen_manpage {
 		my $current_date = strftime("%Y-%m-%d", localtime);
 		return $gen_tag->("TH", [$name, 
 				'3ps', 
-				q(""), 
-				qq("$current_date"), 
-				q("PostScript Operator Manual")], "", "\n", "\n");
+				qq($current_date), 
+				q(""),
+				q("PostScript Operators Manual")], "", "\n", "\n");
+	};
+	
+	my $gen_name = sub {
+		return $gen_tag->('SH', ['NAME'], 
+			$gen_tag->('B', [$name], " ", "\n"), 
+			"\n", "\n");
 	};
 
 	my $gen_signature = sub {
 		$signature =~ s/^\s//;
-		return $gen_tag->('SH', ['POSTFIX SIGNATURE'], $signature, "\n", "\n");
+		return $gen_tag->('SH', ['SYNOPSIS'], '\-' . $signature, "\n", "\n");
 	};
 
 	my $gen_description = sub {
@@ -106,6 +112,7 @@ sub gen_manpage {
 	my $newline = sub { print $fho "\n"; };
 
 	print $fho $gen_creds->();
+	print $fho $gen_name->(); 		$newline->();
 	print $fho $gen_title->(); 		$newline->();
 	print $fho $gen_signature->();		$newline->();
 	print $fho $gen_description->();	$newline->();
