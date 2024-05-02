@@ -24,11 +24,16 @@
 .\" 
 .\" For more information, please refer to <http://unlicense.org/>
 .\" 
-.TH abs 3ps "" "2024-05-02" "PostScript Operator Manual"
+.SH NAME
+.B abs
+ 
 
 
-.SH POSTFIX SIGNATURE
-num1 abs num2
+.TH abs 3ps 2024-05-03 "" "PostScript Operators Manual"
+
+
+.SH SYNOPSIS
+\-num1 abs num2
 
 .SH DESCRIPTION
 returns the absolute value of num1. The type of the result is the same as the type of num1 unless  num1 is the most negative integer, in which case the result is a  real. 
