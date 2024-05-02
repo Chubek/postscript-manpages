@@ -2,6 +2,16 @@ use strict;
 use warnings;
 use POSIX qw(strftime);
 
+open (my $fhi, '<', "ps-operators.ls") || die "No such file: ps-operators.ls";
+
+while (<$fhi>) {
+	chomp;
+	next if (/%\s*$/);
+	&parse_operator($1) if (/^([a-z]+)$/);
+}
+
+close($fhi);
+
 sub gen_manpage {
 	my ($name, $signature, $description, $example, $errors, $see_also) = @_;
 
@@ -111,7 +121,7 @@ sub gen_manpage {
 sub parse_operator {
 	my ($op) = @_;
 
-	open (my $fhi, '<', "ps-manpages.hxpipe");
+	open (my $fhi, '<', "ps-manpages.hxpipe") || die "No such file: ps-manpages.hxpipe";
 
 	my $engage = 0;
 	my $signature = "";
@@ -130,7 +140,7 @@ sub parse_operator {
 		elsif (/^\|hr$/ && $engage) { 
 			close($fhi); 
 			&gen_manpage($op, $signature, $description, $example, $errors, $see_also);
-			exit(4); 
+			return;
 		}
 		elsif (/- (.+)$/) { $signature .= "\n$1"; }
 		elsif (/^-\\n\s+(.+)/) {
@@ -145,7 +155,6 @@ sub parse_operator {
 }
 
 
-&parse_operator("abs");
 
 
 __DATA__
