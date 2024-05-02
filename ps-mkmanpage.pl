@@ -64,11 +64,12 @@ sub gen_manpage {
 	};
 
 	my $gen_errors = sub {
-		if ($errors eq "") { return ".RI (NONE)\n"; }
+		if ($errors eq "") { return ".SH ERRORS\n(NONE)"; }
 
-		my $errors_list = split /\n+/, $errors;
-		my $errors_gen = "";
-		foreach my $err ($errors_list) {
+		my @errors_list = split /\n/, $errors;
+		my $errors_gen = ".SH ERRORS\n";
+		foreach my $err (@errors_list) {
+			next if ($err =~ /^\s*$/);
 			$errors_gen .= ".IP \\(bu 2\n";
 			$errors_gen .= "$err(3ps)\n";
 			$errors_gen .= "\n";
@@ -77,11 +78,12 @@ sub gen_manpage {
 	};
 
 	my $gen_see_also = sub {
-		if ($see_also eq "") { return ".RI (NONE)\n"; }
+		if ($see_also eq "") { return ".SH SEE ALSO\n(NONE)"; }
 
-		my $see_also_list = split /\n+/, $see_also;
-		my $see_also_gen = "";
-		foreach my $ref ($see_also_list) {
+		my @see_also_list = split /\n/, $see_also;
+		my $see_also_gen = ".SH SEE ALSO\n";
+		foreach my $ref (@see_also_list) {
+			next if ($ref =~ /^\s*$/);
 			$see_also_gen .= ".IP \\(bu 2\n";
 			$see_also_gen .= "$ref(3ps)\n";
 			$see_also_gen .= "\n";
