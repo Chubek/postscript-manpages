@@ -22,19 +22,16 @@ sub parse_operator {
 		next if /^-\\n$/;
 		next if /^A.+$/;
 		if (/^-$op$/) { $engage = 1; }
-		elsif (/^\|hr$/ && $engage) { print $example; close($fhi); exit(4); }
-		elsif (/- (.+)$/) { $signature = $1; }
+		elsif (/^\|hr$/ && $engage) { print $see_also; close($fhi); exit(4); }
+		elsif (/- (.+)$/) { $signature .= "\n$1"; }
 		elsif (/^-\\n\s+(.+)/) {
 			my $capture = $1;
-
-			if ($capture =~ /EXAMPLE:/) { $mode = \$example; next; }
-			elsif ($capture =~ /SEE ALSO:/) { $mode = \$see_also; next; }
-			elsif ($capture =~ /ERRORS:/) { $mode = \$errors; next; }
-			else {
-				$$mode .= $1;
-			}
-
+			if ($capture =~ /EXAMPLE:/) {  $mode = \$example; next; }
+			elsif ($capture =~ /SEE\s+ALSO:/) { $mode = \$see_also; next; }
+			elsif ($capture =~ /ERRORS:/) {  $mode = \$errors; next; }
+			else {	$$mode .= "\n$1"; }
 		}
+		elsif (/^-([a-z]+)$/ && $engage) { $$mode .= "\n$1"; }
 	}
 }
 
